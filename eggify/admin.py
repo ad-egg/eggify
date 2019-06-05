@@ -1,3 +1,7 @@
+#!/usr/bin/python3
+"""DOCSTRING GOES HERE"""
 from django.contrib import admin
 
-# Register your models here.
+from .models import Eggnt
+
+admin.site.register(Eggnt)
