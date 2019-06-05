@@ -6,6 +6,7 @@ from django.urls import path
 from .import views
 
 
+app_name = 'eggify'
 urlpatterns = [
     path('', views.index, name='index'),
     # ex: /eggnt/95643f32-100b-4941-bff6-f4852e5c25cd/
