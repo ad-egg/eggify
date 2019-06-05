@@ -10,7 +10,11 @@
 		</HEADER>
 
 		<MAIN>
-		TEST<p>welcome to the index
+		<form action="" method="post">
+		{% csrf_token %}
+		{{ form }}
+		<input type="submit" value="Eggify!">
+		</form>
 		</MAIN>
 
 		<FOOTER>

@@ -5,6 +5,7 @@ from django.http import Http404, HttpResponse
 from django.shortcuts import render, render_to_response
 from django.template import RequestContext
 
+from .forms import EggntForm
 from .models import Eggnt
 
 
@@ -18,3 +19,11 @@ def detail(request, eggnt_uid):
 #        return render(request, 'eggify/404.html', {'eggnt': "There is no entry by that ID."})
         raise Http404("There is no entry by that ID.")
     return render(request, 'eggify/detail.html', {'eggnt': eggnt})
+
+def get_words(request):
+    if request.method == 'POST':
+        form = EggntForm(request.POST)
+        if form.is_valid():
+#        DO THINGS
+            pass
+        pass
