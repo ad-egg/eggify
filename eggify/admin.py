@@ -4,4 +4,14 @@ from django.contrib import admin
 
 from .models import Eggnt
 
-admin.site.register(Eggnt)
+
+class EggntAdmin(admin.ModelAdmin):
+    fieldsets = [
+        ('ID', {'fields': ['id']}),
+        ('Date and time information', {'fields': ['updated_at']}),
+        ('User input', {'fields': ['words']}),
+    ]
+    list_display = ('updated_at', 'id', 'words')
+    list_filter = ['updated_at']
+
+admin.site.register(Eggnt, EggntAdmin)
