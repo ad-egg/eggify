@@ -13,5 +13,6 @@ class EggntAdmin(admin.ModelAdmin):
     ]
     list_display = ('updated_at', 'id', 'words')
     list_filter = ['updated_at']
+    search_fields = ['words']
 
 admin.site.register(Eggnt, EggntAdmin)
