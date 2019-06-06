@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<HTML lang="en">
+        <HEAD>
+                <TITLE>Eggify</TITLE>
+        </HEAD>
+
+        <BODY>
+                <HEADER>
+                </HEADER>
+
+                <MAIN>
+			<FORM method="get">
+			{{ box.as_p }}
+			{{ link.as_p }}
+			</FORM>
+			<a href="{% url 'eggify:index' %}">Eggify some more!</a>
+                </MAIN>
+
+                <FOOTER>
+                </FOOTER>
+        </BODY>
+</HTML>
