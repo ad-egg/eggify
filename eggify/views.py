@@ -3,12 +3,12 @@
 
 import re
 
-from django.http import Http404, HttpResponse
-from django.shortcuts import render
+from django.http import Http404 # , HttpResponse, HttpResponseRedirect
+from django.shortcuts import render, get_object_or_404
 from django.template import RequestContext
 from django.views.generic import TemplateView
 
-from .forms import InputForm, LinkForm, OutputForm
+from .forms import InputForm
 from .models import Eggnt
 
 
@@ -17,9 +17,14 @@ def index(request):
     return render(request, 'eggify/index.html', {'form': form})
 
 def egged(request):
-    egged = OutputForm()
-    link = LinkForm()
-    return render(request, 'eggify/egged.html', {'box': egged, 'link': link})
+    if request.method == 'POST':
+        eggnt = Eggnt()
+        form = InputForm(request.POST)
+        if form.is_valid():
+            eggnt.words = form.cleaned_data['your_input']
+            eggnt.save()
+            egg = to_egg(eggnt.words)
+            return render(request, 'eggify/egged.html', {'egg': egg, 'eggnt': eggnt})
 
 def detail(request, eggnt_uid):
     try:
@@ -28,27 +33,10 @@ def detail(request, eggnt_uid):
         raise Http404("There is no entry by that ID.")
     return render(request, 'eggify/detail.html', {'eggnt': eggnt})
 
-def post_words(request):
-    if request.method == 'POST':
-        form = InputForm(request.POST)
-        if form.is_valid():
-            user_input = form.cleaned_data['input']
-            eggnt = Eggnt(words=user_input)
-            eggnt.save()
-# pass the eggnt.id to get_link
-#        DO THINGS
-#            pass
-#        pass
-# this method is supposed to save the client input into the database, get the ID of the input, call to_egg to turn the input into egg, somewhere there should be a function or something that puts together the URL for the client input
-        
-
-# def to_egg(words, egg="egg"):
-#    """turns all the words into egg"""
-#    egged = re.sub(r'[a-z|A-Z]+', egg, words)
-#    return egged
-
-# def get_eggs(request):
-# this method is supposed to get the eggified string and display it in the output form
+def to_egg(words, egg="egg"):
+    """turns all the words into egg"""
+    egged = re.sub(r'[a-z|A-Z]+', egg, words)
+    return egged
 
 # def get_link(request):
 # this method is to get the ID of the client input from the database and return a URL
