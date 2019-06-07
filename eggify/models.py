@@ -15,8 +15,8 @@ class Eggnt(models.Model):
         """returns the words"""
         return self.words
 
-    id = models.CharField(max_length=50, default=str(uuid.uuid4()), primary_key=True)
-    updated_at = models.DateTimeField('updated at', default=timezone.now())
+    id = models.CharField(max_length=50, default=str(uuid.uuid4()), primary_key=True, editable=False)
+    updated_at = models.DateTimeField('updated at', default=timezone.now(), editable=False)
     words = models.TextField(null=False, help_text='Enter text to be eggified!')
 #    user_num = models.ForeignKey(User, on_delete=models.CASCADE, default=0)
 

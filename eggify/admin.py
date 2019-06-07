@@ -7,8 +7,8 @@ from .models import Eggnt
 
 class EggntAdmin(admin.ModelAdmin):
     fieldsets = [
-        ('ID', {'fields': ['id']}),
-        ('Date and time information', {'fields': ['updated_at']}),
+#        ('ID', {'fields': ['id']}),
+#        ('Date and time information', {'fields': ['updated_at']}),
         ('User input', {'fields': ['words']}),
     ]
     list_display = ('updated_at', 'id', 'words')
