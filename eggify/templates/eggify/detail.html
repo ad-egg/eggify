@@ -10,7 +10,7 @@
 		</HEADER>
 
 		<MAIN>
-		{{ eggnt.words }}
+		{{ eggnt_html|safe }}
 		<p>
 		<a href="{% url 'eggify:index' %}">Back to Eggify</a>
 		</MAIN>

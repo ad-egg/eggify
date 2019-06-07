@@ -10,14 +10,14 @@
                 </HEADER>
 
                 <MAIN>
-			{{ egg }}
-			<p>
+			{{ egg_html|safe }}
+			<br><br>
 			Eggn't ID: {{ eggnt.id }}
-			<p>
+			<br><br>
 			Eggn't URL: {% url 'eggify:detail' eggnt.id %}
-			<p>
+			<br><br>
 			<a href="{% url 'eggify:detail' eggnt.id %}">Eggn't link</a>
-			<p>
+			<br><br>
 			<a href="{% url 'eggify:index' %}">Eggify some more!</a>
                 </MAIN>
 

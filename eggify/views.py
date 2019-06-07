@@ -24,19 +24,23 @@ def egged(request):
             eggnt.words = form.cleaned_data['your_input']
             eggnt.save()
             egg = to_egg(eggnt.words)
-            return render(request, 'eggify/egged.html', {'egg': egg, 'eggnt': eggnt})
+            egg_html = newline_to_br(egg)
+            return render(request, 'eggify/egged.html', {'egg_html': egg_html, 'eggnt': eggnt})
 
 def detail(request, eggnt_uid):
     try:
         eggnt = Eggnt.objects.get(pk=eggnt_uid)
+        eggnt_html = newline_to_br(eggnt.words)
     except Eggnt.DoesNotExist:
         raise Http404("There is no entry by that ID.")
-    return render(request, 'eggify/detail.html', {'eggnt': eggnt})
+    return render(request, 'eggify/detail.html', {'eggnt_html': eggnt_html})
 
 def to_egg(words, egg="egg"):
     """turns all the words into egg"""
     egged = re.sub(r'[a-z|A-Z]+', egg, words)
     return egged
 
-# def get_link(request):
-# this method is to get the ID of the client input from the database and return a URL
+def newline_to_br(words_w_newline):
+    """replaces newline character with HTML tag for line break"""
+    words_w_br = words_w_newline.replace('\n', '<br>')
+    return words_w_br
