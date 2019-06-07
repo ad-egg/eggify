@@ -11,6 +11,9 @@ from django.utils import timezone
 class Eggnt(models.Model):
     """a class Eggnt"""
 
+    class Meta:
+        ordering = ('updated_at', )
+
     def __str__(self):
         """returns the words"""
         return self.words
