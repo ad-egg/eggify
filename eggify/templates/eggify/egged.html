@@ -14,6 +14,10 @@
 			<p>
 			Eggn't ID: {{ eggnt.id }}
 			<p>
+			Eggn't URL: {% url 'eggify:detail' eggnt.id %}
+			<p>
+			<a href="{% url 'eggify:detail' eggnt.id %}">Eggn't link</a>
+			<p>
 			<a href="{% url 'eggify:index' %}">Eggify some more!</a>
                 </MAIN>
 
