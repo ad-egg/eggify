@@ -35,8 +35,7 @@ class Eggnt(models.Model):
     @classmethod
     def update(cls, words):
         """creates a new Eggnt object every time"""
-        eggnt = cls(words=words, id=str(uuid.uuid4()))
-        return eggnt
+        return cls.create(words)
 
 
 class User(models.Model):

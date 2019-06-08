@@ -20,7 +20,7 @@ def egged(request):
     if request.method == 'POST':
         form = InputForm(request.POST)
         if form.is_valid():
-            eggnt = Eggnt.create(form.cleaned_data['your_input'])
+            eggnt = Eggnt.create(words=form.cleaned_data['your_input'])
             eggnt.save()
             egg = to_egg(eggnt.words)
             egg_html = newline_to_br(egg)
