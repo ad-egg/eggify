@@ -7,10 +7,10 @@ from .models import Eggnt
 
 class EggntAdmin(admin.ModelAdmin):
     fieldsets = [
-# the following two fieldsets are commented out because editable=False
+# the following fieldsets are commented out because editable=False
 #        ('ID', {'fields': ['id']}),
 #        ('Date and time information', {'fields': ['updated_at']}),
-        ('User input', {'fields': ['words']}),
+#        ('User input', {'fields': ['words']}),
     ]
     list_display = ('updated_at', 'id', 'words')
     list_filter = ['updated_at']
