@@ -24,13 +24,13 @@ def egged(request):
             eggnt = Eggnt.create(words)
             eggnt.save()
             egg = to_egg(eggnt.words)
-            egg_html = newline_to_br(egg)
+            egg_html = whitespace_to_html(egg)
             return render(request, 'eggify/egged.html', {'egg_html': egg_html, 'eggnt': eggnt})
 
 def detail(request, eggnt_uid):
     try:
         eggnt = Eggnt.objects.get(pk=eggnt_uid)
-        eggnt_html = newline_to_br(eggnt.words)
+        eggnt_html = whitespace_to_html(eggnt.words)
     except Eggnt.DoesNotExist:
         raise Http404("There is no entry by that ID.")
     return render(request, 'eggify/detail.html', {'eggnt_html': eggnt_html})
@@ -40,7 +40,9 @@ def to_egg(words, egg="egg"):
     egged = re.sub(r'[a-z|A-Z]+', egg, words)
     return egged
 
-def newline_to_br(words_w_newline):
-    """replaces newline character with HTML tag for line break"""
-    words_w_br = words_w_newline.replace('\n', '<br>')
-    return words_w_br
+def whitespace_to_html(words_w_whitespace):
+    """replaces newline and tab character characters  with HTML tag for line break"""
+    words_w_4space = words_w_whitespace.replace('    ', '&emsp;&emsp;')
+    words_w_tab = words_w_4space.replace('\t', '&emsp;&emsp;&emsp;&emsp;')
+    words_w_html = words_w_tab.replace('\n', '<br>')
+    return words_w_html
