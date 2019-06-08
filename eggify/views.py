@@ -18,10 +18,9 @@ def index(request):
 
 def egged(request):
     if request.method == 'POST':
-        eggnt = Eggnt()
         form = InputForm(request.POST)
         if form.is_valid():
-            eggnt.words = form.cleaned_data['your_input']
+            eggnt = Eggnt.create(form.cleaned_data['your_input'])
             eggnt.save()
             egg = to_egg(eggnt.words)
             egg_html = newline_to_br(egg)

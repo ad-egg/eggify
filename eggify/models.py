@@ -14,7 +14,7 @@ class Eggnt(models.Model):
     # fields/columns in database
     id = models.CharField(max_length=50, default=str(uuid.uuid4()), primary_key=True, editable=False)
     updated_at = models.DateTimeField('updated at', default=timezone.now(), editable=False)
-    words = models.TextField(null=False, help_text='Enter text to be eggified!')
+    words = models.TextField(null=False, editable=False, help_text='Enter text to be eggified!')
 #    user_num = models.ForeignKey(User, on_delete=models.CASCADE, default=0)
 
     # metadata
@@ -25,6 +25,18 @@ class Eggnt(models.Model):
     def __str__(self):
         """returns the words"""
         return self.words
+
+    @classmethod
+    def create(cls, words):
+        """creates a new Eggnt object"""
+        eggnt = cls(words=words, id=str(uuid.uuid4()))
+        return eggnt
+
+    @classmethod
+    def update(cls, words):
+        """creates a new Eggnt object every time"""
+        eggnt = cls(words=words, id=str(uuid.uuid4()))
+        return eggnt
 
 
 class User(models.Model):
