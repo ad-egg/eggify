@@ -24,16 +24,16 @@ def egged(request):
             eggnt = Eggnt.create(words)
             eggnt.save()
             egg = to_egg(eggnt.words)
-            egg_html = whitespace_to_html(egg)
-            return render(request, 'eggify/egged.html', {'egg_html': egg_html, 'eggnt': eggnt})
+#            egg_html = whitespace_to_html(egg)
+            return render(request, 'eggify/egged.html', {'egg': egg, 'eggnt': eggnt})
 
 def detail(request, eggnt_uid):
     try:
         eggnt = Eggnt.objects.get(pk=eggnt_uid)
-        eggnt_html = whitespace_to_html(eggnt.words)
+#        eggnt_html = whitespace_to_html(eggnt.words)
     except Eggnt.DoesNotExist:
         raise Http404("There is no entry by that ID.")
-    return render(request, 'eggify/detail.html', {'eggnt_html': eggnt_html})
+    return render(request, 'eggify/detail.html', {'eggnt': eggnt})
 
 def to_egg(words, egg="egg"):
     """turns all the words into egg"""

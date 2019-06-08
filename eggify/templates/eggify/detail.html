@@ -12,9 +12,11 @@
 		</HEADER>
 
 		<MAIN>
-		{{ eggnt_html|safe }}
-		<p>
-		<a href="{% url 'eggify:index' %}">Back to Eggify</a>
+			<DIV class="original_content">
+			<TEXTAREA readonly=True>{{ eggnt }}</TEXTAREA>
+			<br><br>
+			<a href="{% url 'eggify:index' %}">Back to Eggify</a>
+			</DIV>
 		</MAIN>
 
 		<FOOTER>

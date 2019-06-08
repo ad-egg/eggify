@@ -12,16 +12,18 @@
                 </HEADER>
 
                 <MAIN>
-			{{ egg_html|safe }}
-			<br><br>
-			Eggn't ID: {{ eggnt.id }}
-			<br><br>
-			Eggn't URL: {% url 'eggify:detail' eggnt.id %}
-			<br><br>
-			<a href="{% url 'eggify:detail' eggnt.id %}">Eggn't link</a>
-			<br><br>
-			<a href="{% url 'eggify:index' %}">Eggify some more!</a>
-                </MAIN>
+			<DIV class="eggified">
+				<TEXTAREA readonly=True>{{ egg }}</TEXTAREA>
+				<br><br>
+				Eggn't ID: {{ eggnt.id }}
+				<br><br>
+				Eggn't URL: {% url 'eggify:detail' eggnt.id %}
+				<br><br>
+				<a href="{% url 'eggify:detail' eggnt.id %}">Eggn't link</a>
+				<br><br>
+				<a href="{% url 'eggify:index' %}">Eggify some more!</a>
+			</DIV>
+		</MAIN>
 
                 <FOOTER>
                 </FOOTER>
