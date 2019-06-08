@@ -3,7 +3,6 @@
 
 import uuid
 
-# from datetime import datetime
 from django.db import models
 from django.utils import timezone
 
@@ -12,14 +11,14 @@ class Eggnt(models.Model):
     """a class Eggnt"""
 
     # fields/columns in database
-    id = models.CharField(max_length=50, default=str(uuid.uuid4()), primary_key=True, editable=False)
-    updated_at = models.DateTimeField('updated at', default=timezone.now(), editable=False)
-    words = models.TextField(null=False, editable=False, help_text='Enter text to be eggified!')
+    id = models.CharField(max_length=255, default=str(uuid.uuid4()), primary_key=True, editable=False)
+    created_at = models.DateTimeField('created at', default=timezone.now(), editable=False)
+    words = models.TextField(null=False, help_text='Enter text to be eggified!')
 #    user_num = models.ForeignKey(User, on_delete=models.CASCADE, default=0)
 
     # metadata
     class Meta:
-        ordering = ['-updated_at']
+        ordering = ['-created_at']
 
     # methods
     def __str__(self):
@@ -29,7 +28,7 @@ class Eggnt(models.Model):
     @classmethod
     def create(cls, words):
         """creates a new Eggnt object"""
-        eggnt = cls(words=words, id=str(uuid.uuid4()))
+        eggnt = cls(words=words, id=str(uuid.uuid4()), created_at=timezone.now())
         return eggnt
 
     @classmethod
