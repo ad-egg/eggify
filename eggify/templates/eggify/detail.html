@@ -13,9 +13,12 @@
 
 		<MAIN>
 			<DIV>
-			<TEXTAREA readonly=True>{{ eggnt }}</TEXTAREA>
-			<br><br>
-			<a href="{% url 'eggify:index' %}">Back to Eggify</a>
+				<SECTION>
+				<H3>eggn't ID {{ eggnt.id }}</H3>
+				<TEXTAREA readonly=True>{{ eggnt.words }}</TEXTAREA>
+				<br><br>
+				<a href="{% url 'eggify:index' %}">Back to Eggify</a>
+				</SECTION>
 			</DIV>
 		</MAIN>
 

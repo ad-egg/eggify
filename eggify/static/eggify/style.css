@@ -4,6 +4,7 @@ body {
 	flex-direction: column;
 	color: #000000;
 	font-size: 16px;
+	font-family:Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 header {
@@ -26,6 +27,10 @@ input[type=text] {
 	border: 5px solid #FFD700;
 	border-radius: 5px;
 	padding: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: auto;
+	margin-right: auto;
 	box-sizing: border-box;
 	width: 100%;
 	color: #000000;
@@ -37,6 +42,10 @@ textarea {
 	border: 5px solid #FFD700;
 	border-radius: 5px;
 	padding: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: auto;
+	margin-right: auto;
 	box-sizing: border-box;
 	height: 100%;
 	width: 100%;
@@ -46,6 +55,19 @@ textarea {
 }
 
 label {
+	display: none;
+}
+
+button {
+	background-color: #FFDAB9;
+	border: 5px solid #DEB887;
+	border-radius: 5px;
+	padding: 10px;
 	color: #000000;
 	font-size: 16px;
+}
+
+button:hover {
+	background-color: #DEB887;
+	border: 5px solid #CD853F;
 }

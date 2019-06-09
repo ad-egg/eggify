@@ -13,11 +13,20 @@
 
 		<MAIN>
 			<DIV>
+				<SECTION>
+				<H3>Turn everything into egg!</H3>
 				<FORM action="egged/" method="post">
 				{% csrf_token %}
 				{{ form.as_p }}
-				<BUTTON>Eggify!</BUTTON>
+				<BUTTON>eggify!</BUTTON>
 				</FORM>
+				</SECTION>
+				<SECTION>
+				<H3>How to use eggify:</H3>
+				<p>
+				PUT TEXT IN THE BOX AND PRESS THE EGGIFY BUTTON AND
+				</p>
+				</SECTION>
 			</DIV>
 		</MAIN>
 

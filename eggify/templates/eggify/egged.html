@@ -13,11 +13,16 @@
 
                 <MAIN>
 			<DIV>
+				<SECTION>
+				<H3>Everything is egg!</H3>
 				<TEXTAREA readonly=True>{{ egg }}</TEXTAREA>
 				<br><br>
-				URL for sharing: <input type=text readonly=True value="{% url 'eggify:detail' eggnt.id %}">
+				URL for sharing:
+				<br>
+				<input type=text readonly=True value="{% url 'eggify:detail' eggnt.id %}">
 				<br><br>
 				<a href="{% url 'eggify:index' %}">Eggify some more!</a>
+				</SECTION>
 			</DIV>
 		</MAIN>
 
