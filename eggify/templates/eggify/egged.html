@@ -19,10 +19,11 @@
 				<br><br>
 				URL for sharing:
 				<br>
-				<input type=text readonly=True value="{% url 'eggify:detail' eggnt.id %}">
+				<input type=text readonly=True value="{{ host_name }}{% url 'eggify:detail' eggnt.id %}">
 				<br><br>
 				<a href="{% url 'eggify:index' %}">Eggify some more!</a>
 				</SECTION>
+{{ abs_uri }}
 			</DIV>
 		</MAIN>
 
