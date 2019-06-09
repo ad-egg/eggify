@@ -29,7 +29,7 @@ section {
 	margin-right: auto;
 }
 
-input[type=text] {
+input[type=text], textarea {
 	background-color: #FFFFFF;
 	border: 5px solid #FFD700;
 	border-radius: 5px;
@@ -38,27 +38,25 @@ input[type=text] {
 	margin-bottom: 10px;
 	margin-left: auto;
 	margin-right: auto;
+	float: center;
 	box-sizing: border-box;
 	width: 100%;
 	color: #000000;
 	font-size: 16px;
 }
 
+input[type=text]:focus, textarea:focus {
+	border: 5px dashed #FFD700;
+	outline: none;
+}
+
+input[type=text] {
+}
+
 textarea {
-	background-color: #FFFFFF;
-	border: 5px solid #FFD700;
-	border-radius: 5px;
-	padding: 10px;
-	margin-top: 10px;
-	margin-bottom: 10px;
-	margin-left: auto;
-	margin-right: auto;
-	box-sizing: border-box;
 	height: 75%;
-	width: 100%;
 	min-height: 250px;
-	color: #000000;
-	font-size: 16px;
+	resize: none;
 }
 
 label {
@@ -67,7 +65,7 @@ label {
 
 button {
 	background-color: #FFDAB9;
-	border: 5px solid #DEB887;
+	border: 5px dashed #DEB887;
 	border-radius: 5px;
 	padding: 10px;
 	color: #000000;
@@ -75,6 +73,5 @@ button {
 }
 
 button:hover {
-	background-color: #DEB887;
-	border: 5px solid #CD853F;
+	border: 5px solid #DEB887;
 }
