@@ -1,5 +1,9 @@
 body {
 	background-color: #FFFACD;
+	display: flex;
+	flex-direction: column;
+	color: #000000;
+	font-size: 16px;
 }
 
 header {
@@ -24,6 +28,8 @@ input[type=text] {
 	padding: 10px;
 	box-sizing: border-box;
 	width: 100%;
+	color: #000000;
+	font-size: 16px;
 }
 
 textarea {
@@ -35,4 +41,11 @@ textarea {
 	height: 100%;
 	width: 100%;
 	min-height: 500px;
+	color: #000000;
+	font-size: 16px;
+}
+
+label {
+	color: #000000;
+	font-size: 16px;
 }
