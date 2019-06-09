@@ -5,6 +5,7 @@
 		<META name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
                 <TITLE>Eggified</TITLE>
 		<LINK rel="stylesheet" type="text/css" href="{% static 'eggify/style.css' %}">
+		<SCRIPT type="text/javascript" src="/static/eggify/scripts.js"></SCRIPT>
         </HEAD>
 
         <BODY>
@@ -15,11 +16,12 @@
 			<DIV>
 				<SECTION>
 				<H3>Everything is egg!</H3>
-				<TEXTAREA readonly=True>{{ egg }}</TEXTAREA>
+				<BUTTON id="eggButton" onclick="copyEgg()">copy eggified text</BUTTON>
+				<TEXTAREA readonly=True id="eggOutput">{{ egg }}</TEXTAREA>
 				<br><br>
-				URL for sharing:
+				URL for sharing: <BUTTON id="linkButton" onclick="copyLink()">copy link</BUTTON>
 				<br>
-				<input type=text readonly=True value="{{ host_name }}{% url 'eggify:detail' eggnt.id %}">
+				<input type=text readonly=True id="eggntLink" value="{{ host_name }}{% url 'eggify:detail' eggnt.id %}">
 				<br><br>
 				<a href="{% url 'eggify:index' %}">Eggify some more!</a>
 				</SECTION>
