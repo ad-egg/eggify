@@ -1,3 +1,38 @@
 body {
-	background-color: #FFD700;
+	background-color: #FFFACD;
+}
+
+header {
+	border-bottom: 5px solid #FFD700;
+	padding: 10px;
+}
+
+footer {
+	border-top: 5px solid #FFD700;
+	padding: 10px;
+}
+
+
+main {
+	padding: 10px;
+}
+
+input[type=text] {
+	background-color: #FFFFFF;
+	border: 5px solid #FFD700;
+	border-radius: 5px;
+	padding: 10px;
+	box-sizing: border-box;
+	width: 100%;
+}
+
+textarea {
+	background-color: #FFFFFF;
+	border: 5px solid #FFD700;
+	border-radius: 5px;
+	padding: 10px;
+	box-sizing: border-box;
+	height: 100%;
+	width: 100%;
+	min-height: 500px;
 }
