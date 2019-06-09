@@ -22,6 +22,13 @@ main {
 	padding: 10px;
 }
 
+section {
+	width: 75%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 input[type=text] {
 	background-color: #FFFFFF;
 	border: 5px solid #FFD700;
@@ -47,7 +54,7 @@ textarea {
 	margin-left: auto;
 	margin-right: auto;
 	box-sizing: border-box;
-	height: 100%;
+	height: 75%;
 	width: 100%;
 	min-height: 250px;
 	color: #000000;
