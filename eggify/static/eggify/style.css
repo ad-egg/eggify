@@ -17,6 +17,42 @@ main {
 	padding: 10px;
 }
 
+div {
+        display: block;
+        width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+}
+
+input[type=text], textarea {
+        border-radius: 5px;
+        padding: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+        width: 100%;
+        font-size: 16px;
+}
+
+input[type=text] {
+}
+
+textarea {
+        height: 75%;
+        min-height: 250px;
+        resize: none;
+}
+
+label {
+        display: none;
+}
+
+button {
+        border-radius: 5px;
+        padding: 10px;
+        font-size: 16px;
+}
+
 #logo {
         background-image: url("images/eggify_darktheme.png");
         background-repeat: no-repeat;
@@ -26,73 +62,41 @@ main {
 	padding: 10px;
 }
 
+#theme {
+	float: right;
+}
+
 body.yellow_egg {
-	background-color: #FFFACD;
-	display: flex;
-	flex-direction: column;
-	color: #000000;
+        background-color: #FFFACD;
+        color: #000000;
 }
 
 header.yellow_egg {
-	border-bottom: 5px solid #FFD700;
+        border-bottom: 5px solid #FFD700;
 }
 
 footer.yellow_egg {
-	border-top: 5px solid #FFD700;
+        border-top: 5px solid #FFD700;
 }
-
 
 main.yellow_egg {
 }
 
-div {
-	display: block;
-	width: 75%;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-input[type=text], textarea {
+input[type=text].yellow_egg, textarea.yellow_egg, textarea#id_your_input {
 	background-color: #FFFFFF;
 	border: 5px solid #FFD700;
-	border-radius: 5px;
-	padding: 10px;
-	margin-top: 10px;
-	margin-bottom: 10px;
-	margin-left: auto;
-	margin-right: auto;
-	float: center;
-	box-sizing: border-box;
-	width: 100%;
 	color: #000000;
-	font-size: 16px;
 }
 
-input[type=text]:focus, textarea:focus {
+input[type=text].yellow_egg:focus, textarea.yellow_egg:focus, textarea#id_your_input:focus {
 	border: 5px dashed #FFD700;
 	outline: none;
-}
-
-input[type=text] {
-}
-
-textarea {
-	height: 75%;
-	min-height: 250px;
-	resize: none;
-}
-
-label {
-	display: none;
 }
 
 button.yellow_egg {
 	background-color: #FFDAB9;
 	border: 5px dashed #DEB887;
-	border-radius: 5px;
-	padding: 10px;
 	color: #000000;
-	font-size: 16px;
 }
 
 button.yellow_egg:hover {

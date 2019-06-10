@@ -21,11 +21,11 @@
 				<SECTION>
 				<H3>Everything is egg!</H3>
 				<BUTTON class="yellow_egg" id="eggButton" onclick="copyEgg()">copy eggified text</BUTTON>
-				<TEXTAREA readonly=True id="eggOutput">{{ egg }}</TEXTAREA>
+				<TEXTAREA readonly=True class="yellow_egg" id="eggOutput">{{ egg }}</TEXTAREA>
 				<br><br>
-				URL for sharing: <BUTTON class="yellow_egg" id="linkButton" onclick="copyLink()">copy link</BUTTON>
+				<BUTTON class="yellow_egg" id="linkButton" onclick="copyLink()">copy link to original input</BUTTON>
 				<br>
-				<input type=text readonly=True id="eggntLink" value="{{ host_name }}{% url 'eggify:detail' eggnt.id %}">
+				<input type=text readonly=True class="yellow_egg" id="eggntLink" value="{{ host_name }}{% url 'eggify:detail' eggnt.id %}">
 				<br><br>
 				<a href="{% url 'eggify:index' %}">Eggify some more!</a>
 				</SECTION>
