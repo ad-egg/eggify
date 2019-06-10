@@ -1,25 +1,48 @@
+body {
+	display: flex;
+	flex-direction: column;
+	font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 16px;
+}
+
+header {
+        padding: 10px;
+}
+
+footer {
+	padding: 10px;
+}
+
+main {
+	padding: 10px;
+}
+
+#logo {
+        background-image: url("images/eggify_darktheme.png");
+        background-repeat: no-repeat;
+        background-size: 186px 109px;
+        background-position: left center;
+        height: 100px;
+	padding: 10px;
+}
+
 body.yellow_egg {
 	background-color: #FFFACD;
 	display: flex;
 	flex-direction: column;
 	color: #000000;
-	font-size: 16px;
-	font-family:Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 header.yellow_egg {
 	border-bottom: 5px solid #FFD700;
-	padding: 10px;
 }
 
 footer.yellow_egg {
 	border-top: 5px solid #FFD700;
-	padding: 10px;
 }
 
 
 main.yellow_egg {
-	padding: 10px;
 }
 
 div {
