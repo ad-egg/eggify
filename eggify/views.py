@@ -2,6 +2,7 @@
 """DOCSTRING GOES HERE"""
 
 import re
+import uuid
 
 from django.http import Http404, HttpRequest
 from django.shortcuts import render, get_object_or_404
@@ -14,7 +15,7 @@ from .models import Eggnt
 
 def index(request):
     form = InputForm()
-    return render(request, 'eggify/index.html', {'form': form})
+    return render(request, 'eggify/index.html', {'form': form, 'cache_id': str(uuid.uuid4())})
 
 def egged(request):
     if request.method == 'POST':
@@ -25,14 +26,14 @@ def egged(request):
             eggnt.save()
             egg = to_egg(eggnt.words)
             host_name = request.get_host()
-            return render(request, 'eggify/egged.html', {'egg': egg, 'eggnt': eggnt, 'host_name': host_name})
+            return render(request, 'eggify/egged.html', {'egg': egg, 'eggnt': eggnt, 'host_name': host_name, 'cache_id': str(uuid.uuid4())})
 
 def detail(request, eggnt_uid):
     try:
         eggnt = Eggnt.objects.get(pk=eggnt_uid)
     except Eggnt.DoesNotExist:
         raise Http404("There is no entry by that ID.")
-    return render(request, 'eggify/detail.html', {'eggnt': eggnt})
+    return render(request, 'eggify/detail.html', {'eggnt': eggnt, 'cache_id': str(uuid.uuid4())})
 
 def to_egg(words, egg="egg"):
     """turns all the words into egg"""

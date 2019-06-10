@@ -25,3 +25,16 @@ function copyLink() {
     linkButton.innerHTML = originalText;
   }, 2000)
 }
+
+function changeTheme() {
+  let oppTheme = document.getElementById("theme");
+    if (oppTheme.innerHTML === "dark theme") {
+       oppTheme.innerHTML = "light theme";
+    } else {
+       oppTheme.innerHTML = "dark theme";
+    }
+  let x = document.getElementsByClassName("yellow_egg");
+  for (let i = 0; i < x.length; i++) {
+    x[i].classList.toggle("century_egg");
+  }
+}

@@ -1,4 +1,4 @@
-body {
+body.yellow_egg {
 	background-color: #FFFACD;
 	display: flex;
 	flex-direction: column;
@@ -7,24 +7,24 @@ body {
 	font-family:Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
-header {
+header.yellow_egg {
 	border-bottom: 5px solid #FFD700;
 	padding: 10px;
 }
 
-footer {
+footer.yellow_egg {
 	border-top: 5px solid #FFD700;
 	padding: 10px;
 }
 
 
-main {
+main.yellow_egg {
 	padding: 10px;
 }
 
-section {
-	width: 75%;
+div {
 	display: block;
+	width: 75%;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -63,7 +63,7 @@ label {
 	display: none;
 }
 
-button {
+button.yellow_egg {
 	background-color: #FFDAB9;
 	border: 5px dashed #DEB887;
 	border-radius: 5px;
@@ -72,6 +72,6 @@ button {
 	font-size: 16px;
 }
 
-button:hover {
+button.yellow_egg:hover {
 	border: 5px solid #DEB887;
 }

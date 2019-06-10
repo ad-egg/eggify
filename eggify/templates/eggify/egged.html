@@ -4,22 +4,25 @@
         <HEAD>
 		<META name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
                 <TITLE>Eggified</TITLE>
-		<LINK rel="stylesheet" type="text/css" href="{% static 'eggify/style.css' %}">
+		<LINK rel="stylesheet" type="text/css" href="{% static 'eggify/style.css' %}?{{ cache_id }}">
 		<SCRIPT type="text/javascript" src="/static/eggify/scripts.js"></SCRIPT>
         </HEAD>
 
-        <BODY>
-                <HEADER>
+        <BODY class="yellow_egg">
+                <HEADER class="yellow_egg">
                 </HEADER>
 
-                <MAIN>
+                <MAIN class="yellow_egg">
+			<DIV>
+				<SPAN><BUTTON class="yellow_egg" id="theme" onclick="changeTheme()">dark theme</BUTTON></SPAN>
+			</DIV>
 			<DIV>
 				<SECTION>
 				<H3>Everything is egg!</H3>
-				<BUTTON id="eggButton" onclick="copyEgg()">copy eggified text</BUTTON>
+				<BUTTON class="yellow_egg" id="eggButton" onclick="copyEgg()">copy eggified text</BUTTON>
 				<TEXTAREA readonly=True id="eggOutput">{{ egg }}</TEXTAREA>
 				<br><br>
-				URL for sharing: <BUTTON id="linkButton" onclick="copyLink()">copy link</BUTTON>
+				URL for sharing: <BUTTON class="yellow_egg" id="linkButton" onclick="copyLink()">copy link</BUTTON>
 				<br>
 				<input type=text readonly=True id="eggntLink" value="{{ host_name }}{% url 'eggify:detail' eggnt.id %}">
 				<br><br>
@@ -29,7 +32,7 @@
 			</DIV>
 		</MAIN>
 
-                <FOOTER>
+                <FOOTER class="yellow_egg">
                 </FOOTER>
         </BODY>
 </HTML>

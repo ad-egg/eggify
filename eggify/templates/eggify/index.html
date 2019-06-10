@@ -4,21 +4,25 @@
 	<HEAD>
 		<META name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<TITLE>Eggify</TITLE>
-		<LINK rel="stylesheet" type="text/css" href="{% static 'eggify/style.css' %}">
+		<LINK rel="stylesheet" type="text/css" href="{% static 'eggify/style.css' %}?{{ cache_id }}">
+                <SCRIPT type="text/javascript" src="/static/eggify/scripts.js"></SCRIPT>
 	</HEAD>
 
-	<BODY>
-		<HEADER>
+	<BODY class="yellow_egg">
+		<HEADER class="yellow_egg">
 		</HEADER>
 
-		<MAIN>
+		<MAIN class="yellow_egg">
+			<DIV>
+				<SPAN><BUTTON class="yellow_egg" id="theme" onclick="changeTheme()">dark theme</BUTTON></SPAN>
+			</DIV>
 			<DIV>
 				<SECTION>
 				<H3>Turn everything into egg!</H3>
 				<FORM action="egged/" method="post">
 				{% csrf_token %}
 				{{ form.as_p }}
-				<BUTTON>eggify!</BUTTON>
+				<BUTTON class="yellow_egg">eggify!</BUTTON>
 				</FORM>
 				</SECTION>
 				<SECTION>
@@ -30,7 +34,7 @@
 			</DIV>
 		</MAIN>
 
-		<FOOTER>
+		<FOOTER class="yellow_egg">
 		</FOOTER>
 	</BODY>
 </HTML>
