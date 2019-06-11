@@ -39,7 +39,8 @@ def detail(request, eggnt_uid):
     return render(request, 'eggify/detail.html', {'theme': theme, 'eggnt': eggnt, 'cache_id': str(uuid.uuid4())})
 
 def error_404(request, exception):
-    data = {'exception': exception}
+    theme = "yellow_egg"
+    data = {'exception': exception, 'theme': theme, 'cache_id': str(uuid.uuid4())}
     return render(request, '404.html', data)
 
 def to_egg(words, egg="egg"):
