@@ -3,6 +3,7 @@ body {
 	flex-direction: column;
 	font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
 	font-size: 16px;
+	line-height: 2;
 }
 
 header {
