@@ -103,6 +103,22 @@ button.yellow_egg:hover {
 	border: 5px solid #DEB887;
 }
 
+a.yellow_egg:link {
+	color: #B22222;
+}
+
+a.yellow_egg:visited {
+	color: #B22222;
+}
+
+a.yellow_egg:hover {
+	color: #FF6347;
+}
+
+a.yellow_egg:active {
+	color: #FF6347;
+}
+
 body.century_egg {
 	background-color: #2B2B2B;
 	color: #FFFFFF;
@@ -138,4 +154,20 @@ button.century_egg {
 
 button.century_egg:hover {
 	border: 5px solid #234B00;
+}
+
+a.century_egg:link {
+	color: #DEB887;
+}
+
+a.century_egg:visited {
+	color: #DEB887;
+}
+
+a.century_egg:hover {
+	color: #F5DEB3;
+}
+
+a.century_egg:active {
+	color: #F5DEB3;
 }
