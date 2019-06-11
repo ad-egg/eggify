@@ -34,9 +34,13 @@ def detail(request, eggnt_uid):
     try:
         eggnt = Eggnt.objects.get(pk=eggnt_uid)
     except Eggnt.DoesNotExist:
-        raise Http404("There is no entry by that ID.")
+        raise Http404("Unfortuneggly, there is no entry by that ID.")
     theme = "yellow_egg"
     return render(request, 'eggify/detail.html', {'theme': theme, 'eggnt': eggnt, 'cache_id': str(uuid.uuid4())})
+
+def error_404(request, exception):
+    data = {'exception': exception}
+    return render(request, '404.html', data)
 
 def to_egg(words, egg="egg"):
     """turns all the words into egg and every digit into 0"""

@@ -1,19 +1,28 @@
+{% load static %}
 <!DOCTYPE html>
-
 <HTML lang="en">
 	<HEAD>
-		<TITLE>Eggify</TITLE>
+		<META name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<TITLE>No such egg</TITLE>
+		<LINK rel="stylesheet" type="text/css" href="{% static 'eggify/style.css' %}?{{ cache_id }}">
+                <SCRIPT type="text/javascript" src="/static/eggify/scripts.js"></SCRIPT>
 	</HEAD>
 
-	<BODY>
-		<HEADER>
+	<BODY class={{ theme }}>
+		<HEADER class={{ theme }}>
+			<DIV id="logo"></DIV>
 		</HEADER>
 
-		<MAIN>
-		404 page
+		<MAIN class={{ theme }}>
+			<SECTION>
+			<H3>congratuleggtions, you are looking at our 404 page!</H3>
+			{{ exception }}
+			<br><br>
+			<a href="{% url 'eggify:index' %}" class={{ theme }}>Back to Eggify</a>
+			</SECTION>
 		</MAIN>
 
-		<FOOTER>
+		<FOOTER class={{ theme }}>
 		</FOOTER>
 	</BODY>
 </HTML>
