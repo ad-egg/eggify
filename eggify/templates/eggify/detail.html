@@ -4,25 +4,30 @@
 	<HEAD>
 		<META name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<TITLE>Eggn't</TITLE>
-		<LINK rel="stylesheet" type="text/css" href="{% static 'eggify/style.css' %}">
+		<LINK rel="stylesheet" type="text/css" href="{% static 'eggify/style.css' %}?{{ cache_id }}">
+                <SCRIPT type="text/javascript" src="/static/eggify/scripts.js"></SCRIPT>
 	</HEAD>
 
-	<BODY>
-		<HEADER>
+	<BODY class={{ theme }}>
+		<HEADER class={{ theme }}>
+                        <DIV id="logo"></DIV>
 		</HEADER>
 
-		<MAIN>
+		<MAIN class={{ theme }}>
+                        <DIV>
+                                <BUTTON class={{ theme }} id="theme" onclick="changeTheme()">dark theme</BUTTON>
+                        </DIV>
 			<DIV>
 				<SECTION>
 				<H3>eggn't ID {{ eggnt.id }}</H3>
-				<TEXTAREA readonly=True>{{ eggnt.words }}</TEXTAREA>
+				<TEXTAREA readonly=True class={{ theme }}>{{ eggnt.words }}</TEXTAREA>
 				<br><br>
-				<a href="{% url 'eggify:index' %}">Back to Eggify</a>
+				<a href="{% url 'eggify:index' %}" class={{ theme }}>Back to Eggify</a>
 				</SECTION>
 			</DIV>
 		</MAIN>
 
-		<FOOTER>
+		<FOOTER class={{ theme }}>
 		</FOOTER>
 	</BODY>
 </HTML>

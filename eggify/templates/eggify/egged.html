@@ -4,32 +4,36 @@
         <HEAD>
 		<META name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
                 <TITLE>Eggified</TITLE>
-		<LINK rel="stylesheet" type="text/css" href="{% static 'eggify/style.css' %}">
+		<LINK rel="stylesheet" type="text/css" href="{% static 'eggify/style.css' %}?{{ cache_id }}">
 		<SCRIPT type="text/javascript" src="/static/eggify/scripts.js"></SCRIPT>
         </HEAD>
 
-        <BODY>
-                <HEADER>
+        <BODY class={{ theme }}>
+                <HEADER class={{ theme }}>
+                        <DIV id="logo"></DIV>
                 </HEADER>
 
-                <MAIN>
+                <MAIN class={{ theme }}>
+                        <DIV>
+                                <BUTTON class={{ theme }} id="theme" onclick="changeTheme()">dark theme</BUTTON>
+                        </DIV>
 			<DIV>
 				<SECTION>
 				<H3>Everything is egg!</H3>
-				<BUTTON id="eggButton" onclick="copyEgg()">copy eggified text</BUTTON>
-				<TEXTAREA readonly=True id="eggOutput">{{ egg }}</TEXTAREA>
+				<BUTTON class={{ theme }} id="eggButton" onclick="copyEgg()">copy eggified text</BUTTON>
+				<TEXTAREA readonly=True class={{ theme }} id="eggOutput">{{ egg }}</TEXTAREA>
 				<br><br>
-				URL for sharing: <BUTTON id="linkButton" onclick="copyLink()">copy link</BUTTON>
+				<BUTTON class={{ theme }} id="linkButton" onclick="copyLink()">copy link to original input</BUTTON>
 				<br>
-				<input type=text readonly=True id="eggntLink" value="{{ host_name }}{% url 'eggify:detail' eggnt.id %}">
+				<input type=text readonly=True class={{ theme }} id="eggntLink" value="{{ host_name }}{% url 'eggify:detail' eggnt.id %}">
 				<br><br>
-				<a href="{% url 'eggify:index' %}">Eggify some more!</a>
+				<a href="{% url 'eggify:index' %}" class={{ theme }}>Eggify some more!</a>
 				</SECTION>
 {{ abs_uri }}
 			</DIV>
 		</MAIN>
 
-                <FOOTER>
+                <FOOTER class={{ theme }}>
                 </FOOTER>
         </BODY>
 </HTML>

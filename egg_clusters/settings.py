@@ -32,6 +32,7 @@ ALLOWED_HOSTS = ['0.0.0.0', '127.0.0.1', '55.55.55.5']
 
 INSTALLED_APPS = [
     'eggify.apps.EggifyConfig',
+    'widget_tweaks',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

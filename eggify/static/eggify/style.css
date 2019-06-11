@@ -1,77 +1,173 @@
 body {
-	background-color: #FFFACD;
 	display: flex;
 	flex-direction: column;
-	color: #000000;
+	font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
 	font-size: 16px;
-	font-family:Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 header {
-	border-bottom: 5px solid #FFD700;
-	padding: 10px;
+        padding: 10px;
 }
 
 footer {
-	border-top: 5px solid #FFD700;
 	padding: 10px;
 }
-
 
 main {
 	padding: 10px;
 }
 
-section {
-	width: 75%;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+div {
+        display: block;
+        width: 75%;
+        margin-left: auto;
+        margin-right: auto;
 }
 
 input[type=text], textarea {
-	background-color: #FFFFFF;
-	border: 5px solid #FFD700;
-	border-radius: 5px;
-	padding: 10px;
-	margin-top: 10px;
-	margin-bottom: 10px;
-	margin-left: auto;
-	margin-right: auto;
-	float: center;
-	box-sizing: border-box;
-	width: 100%;
-	color: #000000;
-	font-size: 16px;
-}
-
-input[type=text]:focus, textarea:focus {
-	border: 5px dashed #FFD700;
-	outline: none;
+        border-radius: 5px;
+        padding: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+        width: 100%;
+        font-size: 16px;
 }
 
 input[type=text] {
 }
 
 textarea {
-	height: 75%;
-	min-height: 250px;
-	resize: none;
+        height: 75%;
+        min-height: 250px;
+        resize: none;
 }
 
 label {
-	display: none;
+        display: none;
 }
 
 button {
-	background-color: #FFDAB9;
-	border: 5px dashed #DEB887;
-	border-radius: 5px;
-	padding: 10px;
-	color: #000000;
-	font-size: 16px;
+        border-radius: 5px;
+        padding: 10px;
+        font-size: 16px;
 }
 
-button:hover {
+#logo {
+        background-image: url("images/eggify_darktheme.png");
+        background-repeat: no-repeat;
+        background-size: 186px 109px;
+        background-position: left center;
+        height: 100px;
+	padding: 10px;
+}
+
+#theme {
+	float: right;
+}
+
+body.yellow_egg {
+        background-color: #FFFACD;
+        color: #000000;
+}
+
+header.yellow_egg {
+        border-bottom: 5px solid #FFD700;
+}
+
+footer.yellow_egg {
+        border-top: 5px solid #FFD700;
+}
+
+main.yellow_egg {
+}
+
+input[type=text].yellow_egg, textarea.yellow_egg {
+	background-color: #FFFFFF;
+	border: 5px solid #FFD700;
+	color: #000000;
+}
+
+input[type=text].yellow_egg:focus, textarea.yellow_egg:focus {
+	border: 5px dashed #FFD700;
+	outline: none;
+}
+
+button.yellow_egg {
+	background-color: #FFDAB9;
+	border: 5px dashed #DEB887;
+	color: #000000;
+}
+
+button.yellow_egg:hover {
 	border: 5px solid #DEB887;
+}
+
+a.yellow_egg:link {
+	color: #B22222;
+}
+
+a.yellow_egg:visited {
+	color: #B22222;
+}
+
+a.yellow_egg:hover {
+	color: #FF6347;
+}
+
+a.yellow_egg:active {
+	color: #FF6347;
+}
+
+body.century_egg {
+	background-color: #2B2B2B;
+	color: #FFFFFF;
+}
+
+header.century_egg {
+	border-bottom: 5px solid #234B00;
+}
+
+footer.century_egg {
+	border-top: 5px solid #234B00;
+}
+
+main.century_egg {
+}
+
+input[type=text].century_egg, textarea.century_egg {
+	background-color: #000000;
+	border: 5px solid #234B00;
+	color: #FFFFFF;
+}
+
+input[type=text].century_egg:focus, textarea.century_egg:focus {
+	border: 5px dashed #234B00;
+	outline:none;
+}
+
+button.century_egg {
+	background-color: #520000;
+	border: 5px dashed #234B00;
+	color: #FFFFFF;
+}
+
+button.century_egg:hover {
+	border: 5px solid #234B00;
+}
+
+a.century_egg:link {
+	color: #DEB887;
+}
+
+a.century_egg:visited {
+	color: #DEB887;
+}
+
+a.century_egg:hover {
+	color: #F5DEB3;
+}
+
+a.century_egg:active {
+	color: #F5DEB3;
 }

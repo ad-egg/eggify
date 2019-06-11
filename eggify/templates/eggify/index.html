@@ -1,24 +1,30 @@
 {% load static %}
+{% load widget_tweaks %}
 <!DOCTYPE html>
 <HTML lang="en">
 	<HEAD>
 		<META name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<TITLE>Eggify</TITLE>
-		<LINK rel="stylesheet" type="text/css" href="{% static 'eggify/style.css' %}">
+		<LINK rel="stylesheet" type="text/css" href="{% static 'eggify/style.css' %}?{{ cache_id }}">
+                <SCRIPT type="text/javascript" src="/static/eggify/scripts.js"></SCRIPT>
 	</HEAD>
 
-	<BODY>
-		<HEADER>
+	<BODY class={{ theme }}>
+		<HEADER class={{ theme }}>
+			<DIV id="logo"></DIV>
 		</HEADER>
 
-		<MAIN>
+		<MAIN class={{ theme }}>
+                        <DIV>
+                                <BUTTON class={{ theme }} id="theme" onclick="changeTheme()">dark theme</BUTTON>
+                        </DIV>
 			<DIV>
 				<SECTION>
 				<H3>Turn everything into egg!</H3>
 				<FORM action="egged/" method="post">
 				{% csrf_token %}
-				{{ form.as_p }}
-				<BUTTON>eggify!</BUTTON>
+				{{ form.your_input|add_class:"yellow_egg" }}
+				<BUTTON class={{ theme }}>eggify!</BUTTON>
 				</FORM>
 				</SECTION>
 				<SECTION>
@@ -30,7 +36,7 @@
 			</DIV>
 		</MAIN>
 
-		<FOOTER>
+		<FOOTER class={{ theme }}>
 		</FOOTER>
 	</BODY>
 </HTML>

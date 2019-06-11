@@ -2,6 +2,7 @@
 """DOCSTRING GOES HERE"""
 
 import re
+import uuid
 
 from django.http import Http404, HttpRequest
 from django.shortcuts import render, get_object_or_404
@@ -13,28 +14,32 @@ from .models import Eggnt
 
 
 def index(request):
+    theme = "yellow_egg"
     form = InputForm()
-    return render(request, 'eggify/index.html', {'form': form})
+    return render(request, 'eggify/index.html', {'theme': theme, 'form': form, 'cache_id': str(uuid.uuid4())})
 
 def egged(request):
     if request.method == 'POST':
         form = InputForm(request.POST)
         if form.is_valid():
+            theme = "yellow_egg"
             words = form.cleaned_data['your_input']
             eggnt = Eggnt.create(words)
             eggnt.save()
             egg = to_egg(eggnt.words)
             host_name = request.get_host()
-            return render(request, 'eggify/egged.html', {'egg': egg, 'eggnt': eggnt, 'host_name': host_name})
+            return render(request, 'eggify/egged.html', {'theme': theme, 'egg': egg, 'eggnt': eggnt, 'host_name': host_name, 'cache_id': str(uuid.uuid4())})
 
 def detail(request, eggnt_uid):
     try:
         eggnt = Eggnt.objects.get(pk=eggnt_uid)
     except Eggnt.DoesNotExist:
         raise Http404("There is no entry by that ID.")
-    return render(request, 'eggify/detail.html', {'eggnt': eggnt})
+    theme = "yellow_egg"
+    return render(request, 'eggify/detail.html', {'theme': theme, 'eggnt': eggnt, 'cache_id': str(uuid.uuid4())})
 
 def to_egg(words, egg="egg"):
-    """turns all the words into egg"""
+    """turns all the words into egg and digits into 0"""
     egged = re.sub(r'[a-z|A-Z]+', egg, words)
+    egged = re.sub(r'[0-9]+', '0', egged)
     return egged
