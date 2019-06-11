@@ -41,5 +41,5 @@ def detail(request, eggnt_uid):
 def to_egg(words, egg="egg"):
     """turns all the words into egg and every digit into 0"""
     egged = re.sub(r'[a-z|A-Z]+', egg, words)
-    egged = re.sub(r'[0-9]', '0', egged)
+    egged = re.sub(r'[1-9]', '0', egged)
     return egged
