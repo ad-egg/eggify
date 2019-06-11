@@ -64,6 +64,7 @@ button {
 
 #theme {
 	float: right;
+	display: none;
 }
 
 body.yellow_egg {
