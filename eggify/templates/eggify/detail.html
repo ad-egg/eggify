@@ -8,26 +8,26 @@
                 <SCRIPT type="text/javascript" src="/static/eggify/scripts.js"></SCRIPT>
 	</HEAD>
 
-	<BODY class="yellow_egg">
-		<HEADER class="yellow_egg">
+	<BODY class={{ theme }}>
+		<HEADER class={{ theme }}>
                         <DIV id="logo"></DIV>
 		</HEADER>
 
-		<MAIN class="yellow_egg">
+		<MAIN class={{ theme }}>
                         <DIV>
-                                <BUTTON class="yellow_egg" id="theme" onclick="changeTheme()">dark theme</BUTTON>
+                                <BUTTON class={{ theme }} id="theme" onclick="changeTheme()">dark theme</BUTTON>
                         </DIV>
 			<DIV>
 				<SECTION>
 				<H3>eggn't ID {{ eggnt.id }}</H3>
-				<TEXTAREA readonly=True class="yellow_egg">{{ eggnt.words }}</TEXTAREA>
+				<TEXTAREA readonly=True class={{ theme }}>{{ eggnt.words }}</TEXTAREA>
 				<br><br>
 				<a href="{% url 'eggify:index' %}">Back to Eggify</a>
 				</SECTION>
 			</DIV>
 		</MAIN>
 
-		<FOOTER class="yellow_egg">
+		<FOOTER class={{ theme }}>
 		</FOOTER>
 	</BODY>
 </HTML>
