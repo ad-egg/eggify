@@ -68,7 +68,7 @@ article {
 footer div {
 	display: flex;
 	flex-flow: row wrap;
-	align-items: flex-start;
+	align-items: stretch;
 	justify-content: space-between;
 }
 
