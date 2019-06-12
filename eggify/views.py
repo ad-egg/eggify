@@ -15,20 +15,22 @@ from .models import Eggnt
 
 def index(request):
     theme = "yellow_egg"
+    location = 'Holberton<br>972 Mission St.<br>San Francisco, CA 94103'
     form = InputForm()
-    return render(request, 'eggify/index.html', {'theme': theme, 'form': form, 'cache_id': str(uuid.uuid4())})
+    return render(request, 'eggify/index.html', {'theme': theme, 'form': form, 'cache_id': str(uuid.uuid4()), 'location': location})
 
 def egged(request):
     if request.method == 'POST':
         form = InputForm(request.POST)
         if form.is_valid():
             theme = "yellow_egg"
+            location = 'Holberton<br>972 Mission St.<br>San Francisco, CA 94103'
             words = form.cleaned_data['your_input']
             eggnt = Eggnt.create(words)
             eggnt.save()
             egg = to_egg(eggnt.words)
             host_name = request.get_host()
-            return render(request, 'eggify/egged.html', {'theme': theme, 'egg': egg, 'eggnt': eggnt, 'host_name': host_name, 'cache_id': str(uuid.uuid4())})
+            return render(request, 'eggify/egged.html', {'theme': theme, 'egg': egg, 'eggnt': eggnt, 'host_name': host_name, 'cache_id': str(uuid.uuid4()), 'location': location})
 
 def detail(request, eggnt_uid):
     try:
@@ -36,11 +38,13 @@ def detail(request, eggnt_uid):
     except Eggnt.DoesNotExist:
         raise Http404("Unfortuneggly, there is no entry by that ID.")
     theme = "yellow_egg"
-    return render(request, 'eggify/detail.html', {'theme': theme, 'eggnt': eggnt, 'cache_id': str(uuid.uuid4())})
+    location = 'Holberton<br>972 Mission St.<br>San Francisco, CA 94103'
+    return render(request, 'eggify/detail.html', {'theme': theme, 'eggnt': eggnt, 'cache_id': str(uuid.uuid4()), 'location': location})
 
 def error_404(request, exception):
     theme = "yellow_egg"
-    data = {'exception': exception, 'theme': theme, 'cache_id': str(uuid.uuid4())}
+    location = 'Holberton<br>972 Mission St.<br>San Francisco, CA 94103'
+    data = {'exception': exception, 'theme': theme, 'cache_id': str(uuid.uuid4()), 'location': location}
     return render(request, '404.html', data)
 
 def to_egg(words, egg="egg"):

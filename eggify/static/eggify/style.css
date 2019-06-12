@@ -25,6 +25,10 @@ div {
         margin-right: auto;
 }
 
+section {
+	width: 100%;
+}
+
 input[type=text], textarea {
         border-radius: 5px;
         padding: 10px;
@@ -52,6 +56,19 @@ button {
         border-radius: 5px;
         padding: 10px;
         font-size: 16px;
+}
+
+article {
+	min-width: 200px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+footer div {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: space-between;
 }
 
 #logo {
