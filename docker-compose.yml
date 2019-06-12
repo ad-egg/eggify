@@ -1,0 +1,26 @@
+version: "3.7"
+
+services:
+  db:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'eggify_db'
+      MYSQL_USER: 'eggmin'
+      MYSQL_PASSWORD: 'eggmin-pwd'
+      MYSQL_ROOT_PASSWORD: 'eggify'
+    volumes:
+      - ./mysql:/var/lib/mysql
+
+  web:
+    build: .
+    command: bash -c "gunicorn -w 3 --bind 0.0.0.0:8030 egg_clusters.wsgi"
+    container_name: eggify
+    volumes:
+      - .:/eggify
+    ports:
+      - "8000:8030"
+    links:
+      - db
+    depends_on:
+      - db
