@@ -62,12 +62,13 @@ article {
 	min-width: 200px;
 	margin-left: 10px;
 	margin-right: 10px;
+	margin-bottom: 10px;
 }
 
 footer div {
 	display: flex;
 	flex-flow: row wrap;
-	align-items: center;
+	align-items: stretch;
 	justify-content: space-between;
 }
 
