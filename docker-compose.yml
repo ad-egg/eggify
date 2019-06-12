@@ -11,10 +11,11 @@ services:
       MYSQL_ROOT_PASSWORD: 'eggify'
     volumes:
       - ./mysql:/var/lib/mysql
+      - ./init:/docker-entrypoint-initdb.d/init.sql
 
   web:
     build: .
-    command: bash -c "gunicorn -w 3 --bind 0.0.0.0:8030 egg_clusters.wsgi"
+    command: bash -c "./manage.py migrate && gunicorn -w 3 --bind 0.0.0.0:8030 egg_clusters.wsgi"
     container_name: eggify
     volumes:
       - .:/eggify
