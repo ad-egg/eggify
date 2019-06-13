@@ -28,6 +28,10 @@ exec { 'add repo' :
   command    => $addrepcmd
 }
 
+exec { 'install kompose' :
+  command    => '/usr/bin/curl -L https://github.com/kubernetes/kompose/releases/download/v1.16.0/kompose-linux-amd64 -o kompose && /bin/chmod +x kompose && /bin/mv ./kompose /usr/local/bin/kompose'
+}
+
 exec { 'update' :
   command => '/usr/bin/apt-get update'
 }
