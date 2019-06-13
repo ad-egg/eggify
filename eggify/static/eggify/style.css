@@ -80,6 +80,8 @@ footer div {
         height: 110px;
 	width: 200px;
 	padding: 10px;
+	margin-left: 0px;
+	margin-right: auto;
 }
 
 #theme {
