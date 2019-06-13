@@ -77,7 +77,8 @@ footer div {
         background-repeat: no-repeat;
         background-size: 186px 109px;
         background-position: left center;
-        height: 100px;
+        height: 110px;
+	width: 200px;
 	padding: 10px;
 }
 
