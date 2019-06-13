@@ -21,7 +21,7 @@
 			<DIV>
 				<SECTION>
 				<H3>Turn everything into egg!</H3>
-				<FORM action="egged/" method="post">
+				<FORM action="egged/" method="post" accept-charset="utf-8">
 				{% csrf_token %}
 				{{ form.your_input|add_class:"yellow_egg" }}
 				<BUTTON class={{ theme }}>eggify!</BUTTON>
