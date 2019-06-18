@@ -7,4 +7,12 @@ from django import forms
 class InputForm(forms.Form):
     """a class InputForm"""
     your_input = forms.CharField(widget=forms.Textarea)
-    language = forms.ChoiceField(choices=[('English', 'English')])
+    language = forms.ChoiceField(choices=[
+            ('English', 'English'),
+            ('Spanish', 'Español'),
+            ('French', 'Français'),
+            ('hanzi', '漢字'),
+            ('Italian', 'Italiano'),
+            ('Latin', 'Latin'),
+            ('Portuguese', 'Português'),
+    ])

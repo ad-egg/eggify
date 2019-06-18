@@ -11,8 +11,9 @@ class EggntAdmin(admin.ModelAdmin):
 #        ('ID', {'fields': ['id']}),
 #        ('Date and time information', {'fields': ['created_at']}),
         ('User input', {'fields': ['words']}),
+        ('Language', {'fields': ['language']}),
     ]
-    list_display = ('created_at', 'id', 'words')
+    list_display = ('created_at', 'id', 'language',  'words')
     list_filter = ['created_at']
     ordering = ('-created_at',)
     search_fields = ['words']
