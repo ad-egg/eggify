@@ -1,0 +1,5 @@
+<?php
+
+    echo exec("sudo puppet apply provision.pp 2>&1");
+
+?>

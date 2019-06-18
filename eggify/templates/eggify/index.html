@@ -4,6 +4,7 @@
 <HTML lang="en">
 	<HEAD>
 		<META name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<META http-equiv="content-type" content="text/html; charset=utf-8">
 		<TITLE>Eggify</TITLE>
 		<LINK rel="stylesheet" type="text/css" href="{% static 'eggify/style.css' %}?{{ cache_id }}">
                 <SCRIPT type="text/javascript" src="/static/eggify/scripts.js"></SCRIPT>
@@ -11,7 +12,9 @@
 
 	<BODY class={{ theme }}>
 		<HEADER class={{ theme }}>
-			<DIV id="logo"></DIV>
+			<DIV>
+			<a href="{% url 'eggify:index' %}"><DIV id="logo"></DIV></a>
+			</DIV>
 		</HEADER>
 
 		<MAIN class={{ theme }}>
@@ -21,22 +24,53 @@
 			<DIV>
 				<SECTION>
 				<H3>Turn everything into egg!</H3>
-				<FORM action="egged/" method="post">
+				<FORM action="egged/" method="post" accept-charset="utf-8">
 				{% csrf_token %}
+				your input language:
+				{{ form.input_language|add_class:"yellow_egg" }}
 				{{ form.your_input|add_class:"yellow_egg" }}
+				eggify output language:
+				{{ form.output_language|add_class:"yellow_egg" }}
+				<br><br>
 				<BUTTON class={{ theme }}>eggify!</BUTTON>
 				</FORM>
 				</SECTION>
 				<SECTION>
 				<H3>How to use eggify:</H3>
+				<OL>
+					<LI>have something to eggify (English input only, for now)</LI>
+					<LI>copy that and paste it into the text box above, or type it in there, NO EMOJIS PLEASE, please paste tab characters</LI>
+					<LI>press the <SPAN>[ eggify! ]</SPAN> button</LI>
+					<LI>use the <SPAN>[ copy eggified text ]</SPAN> button and paste the eggified text where you want to post it</LI>
+					<LI>use the <SPAN>[ copy link to original text ]</SPAN> button and share that along with your eggified text for people who don't speak fluent egg</LI>
+				</OL>
+				</SECTION>
+				<SECTION>
+				<H3>What does eggify do?</H3>
 				<p>
-				PUT TEXT IN THE BOX AND PRESS THE EGGIFY BUTTON AND
+				When you have any non-egg (eggn't) content to share with a "only allowed to say egg" community, like a funny story or joke, sharing it just as it is will result in you getting removed from the community! That is where <STRONG>eggify</STRONG> swoops in to save the day, by helping you turn all of your words into "egg"! Now your story or joke or whatever is safe to share. A link is also provided, for friends who are in these communities but do not speak fluent egg, to view the original input. As a bonus, any digit in your input is replaced by "0" to make the output more egg-like.
 				</p>
 				</SECTION>
 			</DIV>
 		</MAIN>
 
 		<FOOTER class={{ theme }}>
+			<DIV>
+				<ARTICLE>
+				<H3>Find us:</H3>
+				{{ location|safe }}
+				</ARTICLE>
+				<ARTICLE>
+				<H3>The brains that made eggify possible:</H3>
+				Samie Azad: <a href="https://github.com/sazad44" target="_blank" class={{ theme }}>GitHub</a> / <a href="https://twitter.com/AzadSamie" target="_blank" class={{ theme }}>Twitter</a>
+				<br>
+				Athena Deng: <a href="https://github.com/ad-egg" target="_blank" class={{ theme }}>GitHub</a> / <a href="https://twitter.com/CloudyCloak" target="_blank" class={{ theme }}>Twitter</a>
+				</ARTICLE>
+				<ARTICLE>
+				<H3>eggify's code</H3>
+				Check it out on <a href="https://github.com/ad-egg/eggify" target="_blank" class={{ theme }}>GitHub</a>
+				</ARTICLE>
+			</DIV>
 		</FOOTER>
 	</BODY>
 </HTML>
