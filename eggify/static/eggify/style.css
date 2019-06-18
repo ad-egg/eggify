@@ -66,13 +66,13 @@ article {
 }
 
 select {
-
+	font-size: 16px;
 }
 
 footer div {
 	display: flex;
 	flex-flow: row wrap;
-	align-items: center;
+	align-items: stretch;
 	justify-content: space-between;
 }
 
@@ -149,7 +149,6 @@ a.yellow_egg:active {
 select.yellow_egg {
 	color: #000000;
 	background-color: #FFFFFF;
-	font-size: 16px;
 	border: 5px solid #FFD700;
 }
 
@@ -209,6 +208,5 @@ a.century_egg:active {
 select.century_egg {
         color: #FFFFFF;
         background-color: #000000;
-        font-size: 16px;
         border: 5px solid #234B00;
 }
