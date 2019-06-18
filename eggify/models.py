@@ -10,10 +10,17 @@ from django.utils import timezone
 class Eggnt(models.Model):
     """a class Eggnt"""
 
+    # choices
+    ENGLISH = 'EN'
+    LANGUAGE = [
+        (ENGLISH, 'English')
+    ]
+
     # fields/columns in database
     id = models.CharField(max_length=255, default=str(uuid.uuid4()), primary_key=True, editable=False)
     created_at = models.DateTimeField('created at', default=timezone.now(), editable=False)
     words = models.TextField(null=False, help_text='Enter text to be eggified!')
+    language = models.CharField(max_length=2, choices=LANGUAGE, default=ENGLISH)
 #    user_num = models.ForeignKey(User, on_delete=models.CASCADE, default=0)
 
     # metadata
