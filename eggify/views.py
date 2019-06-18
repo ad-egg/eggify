@@ -51,6 +51,6 @@ def error_404(request, exception):
 def to_egg(words, output_language):
     """turns all the words into egg and every digit into 0"""
     egg_languages = {'English': 'egg', 'French': 'oeuf', 'Spanish': 'huevo', 'Latin': 'ovum', 'Portuguese': 'ovo', 'Italian': 'uovo', 'hanzi': '蛋'}
-    egged = re.sub(r'[a-z|A-Z]+', egg_languages[language], words)
+    egged = re.sub(r'[a-z|A-Z]+', egg_languages[output_language], words)
     egged = re.sub(r'[1-9]', '0', egged)
     return egged
