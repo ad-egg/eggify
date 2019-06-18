@@ -26,9 +26,11 @@
 				<H3>Turn everything into egg!</H3>
 				<FORM action="egged/" method="post" accept-charset="utf-8">
 				{% csrf_token %}
+				your input language:
+				{{ form.input_language|add_class:"yellow_egg" }}
 				{{ form.your_input|add_class:"yellow_egg" }}
 				eggify output language:
-				{{ form.language|add_class:"yellow_egg" }}
+				{{ form.output_language|add_class:"yellow_egg" }}
 				<br><br>
 				<BUTTON class={{ theme }}>eggify!</BUTTON>
 				</FORM>
