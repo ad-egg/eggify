@@ -26,6 +26,8 @@
 				<FORM action="egged/" method="post" accept-charset="utf-8">
 				{% csrf_token %}
 				{{ form.your_input|add_class:"yellow_egg" }}
+				{{ form.language|add_class:"yellow_egg" }}
+				<br><br>
 				<BUTTON class={{ theme }}>eggify!</BUTTON>
 				</FORM>
 				</SECTION>
