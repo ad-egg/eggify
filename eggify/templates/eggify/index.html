@@ -4,6 +4,7 @@
 <HTML lang="en">
 	<HEAD>
 		<META name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<META http-equiv="content-type" content="text/html; charset=utf-8">
 		<TITLE>Eggify</TITLE>
 		<LINK rel="stylesheet" type="text/css" href="{% static 'eggify/style.css' %}?{{ cache_id }}">
                 <SCRIPT type="text/javascript" src="/static/eggify/scripts.js"></SCRIPT>
@@ -26,6 +27,7 @@
 				<FORM action="egged/" method="post" accept-charset="utf-8">
 				{% csrf_token %}
 				{{ form.your_input|add_class:"yellow_egg" }}
+				eggify output language:
 				{{ form.language|add_class:"yellow_egg" }}
 				<br><br>
 				<BUTTON class={{ theme }}>eggify!</BUTTON>
@@ -34,7 +36,7 @@
 				<SECTION>
 				<H3>How to use eggify:</H3>
 				<OL>
-					<LI>have something to eggify</LI>
+					<LI>have something to eggify (English input only, for now)</LI>
 					<LI>copy that and paste it into the text box above, or type it in there, NO EMOJIS PLEASE, please paste tab characters</LI>
 					<LI>press the <SPAN>[ eggify! ]</SPAN> button</LI>
 					<LI>use the <SPAN>[ copy eggified text ]</SPAN> button and paste the eggified text where you want to post it</LI>
