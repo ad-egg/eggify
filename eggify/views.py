@@ -62,6 +62,9 @@ def detail(request, eggnt_uid):
             'location': location
             })
 
+def eggnt(request):
+    raise Http404("Nothing to see here.")
+
 def error_404(request, exception):
     theme = "yellow_egg"
     location = 'Holberton<br>972 Mission St.<br>San Francisco, CA 94103'
