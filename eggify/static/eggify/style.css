@@ -84,8 +84,9 @@ footer div {
         height: 120px;
 	width: 200px;
 	padding: 10px;
+	float: left;
 	margin-left: 0px;
-	margin-right: auto;
+	margin-right: 0px;
 }
 
 #theme {
