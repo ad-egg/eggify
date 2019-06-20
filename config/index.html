@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Welcome to nginx!</title>
+    <title>Welcome to eggify!</title>
     <style>
       body {
         width: 35em;
@@ -11,19 +11,12 @@
     </style>
     <meta charset="utf-8"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>    
-    <script type="text/javascript" src="scripts/deploy.js"></script>
+    <script type="text/javascript" src="/scripts/deploy.js"></script>
   </head>
   <body>
-    <h1>Welcome to nginx!</h1>
-    <p>If you see this page, the nginx web server is successfully installed and
-      working. Further configuration is required.</p>
+    <h1>Welcome to eggify!</h1>
+    <p>This page provides a developer's portal to be able to deploy and take down the cluster of services.</p>
 
-    <p>For online documentation and support please refer to
-      <a href="http://nginx.org/">nginx.org</a>.<br/>
-      Commercial support is available at
-      <a href="http://nginx.com/">nginx.com</a>.</p>
-    
-    <p><em>Thank you for using nginx.</em></p>
     <div style="display: flex; justify-content: center">
       <button id="deploy">DEPLOY</button>
     </div>
@@ -32,6 +25,9 @@
     </div>
     <div style="display: flex; justify-content: center">
       <button id="ppinstall">PP_INSTALL</button>
+    </div>
+    <div style="display: flex; justify-content: center">
+      <button id="down">DOWN</button>
     </div>
   </body>
 </html>

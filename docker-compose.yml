@@ -14,7 +14,9 @@ services:
       - ./init:/docker-entrypoint-initdb.d/
 
   web:
-    build: .
+    image: docker.io/sazad44/egg
+    build:
+      context: .
     command: bash -c "./manage.py migrate && gunicorn -w 3 --bind 0.0.0.0:8030 egg_clusters.wsgi"
     container_name: eggify
     volumes:

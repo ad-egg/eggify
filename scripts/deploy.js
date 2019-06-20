@@ -20,4 +20,11 @@ $(document).ready(() => {
       }
     });
   });
+  $('#down').click(() => {
+    $.ajax({
+      url: '/scripts/php/down.php',
+      success: () => {
+      }
+    });
+  });
 });

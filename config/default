@@ -40,7 +40,17 @@ server {
 
 	server_name 13.57.223.35;
 
-	location / {
+	location = / {
+		include proxy_params;
+		proxy_pass http://127.0.0.1:8000;
+	}
+
+	location = /egged/ {
+		include proxy_params;
+		proxy_pass http://127.0.0.1:8000;
+	}
+
+	location ~ /eggnt/ {
 		include proxy_params;
 		proxy_pass http://127.0.0.1:8000;
 	}
