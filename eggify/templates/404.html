@@ -1,6 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
-<HTML lang="en">
+<HTML lang="en" data-theme="light">
 	<HEAD>
 		<META name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<TITLE>No such egg</TITLE>
@@ -9,25 +9,25 @@
                 <SCRIPT type="text/javascript" src="/static/eggify/scripts.js"></SCRIPT>
 	</HEAD>
 
-	<BODY class={{ theme }}>
-		<HEADER class={{ theme }}>
+	<BODY>
+		<HEADER>
 			<DIV>
 			<a href="{% url 'eggify:index' %}"><DIV id="logo"></DIV></a>
 			</DIV>
 		</HEADER>
 
-		<MAIN class={{ theme }}>
+		<MAIN>
 			<DIV>
 				<SECTION>
 				<H3>congratuleggtions, you are looking at our 404 page!</H3>
 				{{ exception }}
 				<br><br>
-				<a href="{% url 'eggify:index' %}" class={{ theme }}>Back to Eggify</a>
+				<a href="{% url 'eggify:index' %}">Back to Eggify</a>
 				</SECTION>
 			</DIV>
 		</MAIN>
 
-		<FOOTER class={{ theme }}>
+		<FOOTER>
 			<DIV>
 				<ARTICLE>
 				<H3>Find us:</H3>
@@ -35,13 +35,13 @@
 				</ARTICLE>
 				<ARTICLE>
 				<H3>The brains that made eggify possible:</H3>
-				Samie Azad: <a href="https://github.com/sazad44" target="_blank" class={{ theme }}>GitHub</a> / <a href="https://twitter.com/AzadSamie" target="_blank" class={{ theme }}>Twitter</a>
+				Samie Azad: <a href="https://github.com/sazad44" target="_blank">GitHub</a> / <a href="https://twitter.com/AzadSamie" target="_blank">Twitter</a>
 				<br>
-				Athena Deng: <a href="https://github.com/ad-egg" target="_blank" class={{ theme }}>GitHub</a> / <a href="https://twitter.com/CloudyCloak" target="_blank" class={{ theme }}>Twitter</a>
+				Athena Deng: <a href="https://github.com/ad-egg" target="_blank">GitHub</a> / <a href="https://twitter.com/CloudyCloak" target="_blank">Twitter</a>
 				</ARTICLE>
 				<ARTICLE>
 				<H3>eggify's code</H3>
-				Check it out on <a href="https://github.com/ad-egg/eggify" target="_blank" class={{ theme }}>GitHub</a>
+				Check it out on <a href="https://github.com/ad-egg/eggify" target="_blank">GitHub</a>
 				</ARTICLE>
 			</DIV>
 		</FOOTER>

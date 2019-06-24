@@ -2,12 +2,12 @@ function changeTheme () {
   let oppTheme = document.getElementById('theme');
   if (oppTheme.innerHTML === 'dark theme') {
     oppTheme.innerHTML = 'light theme';
+    document.documentElement.setAttribute('data-theme', 'dark');
+    localStorage.setItem('theme', 'dark');
   } else {
     oppTheme.innerHTML = 'dark theme';
-  }
-  let x = document.getElementsByClassName('yellow_egg');
-  for (let i = 0; i < x.length; i++) {
-    x[i].classList.toggle('century_egg');
+    document.documentElement.setAttribute('data-theme', 'light');
+    localStorage.setItem('theme', 'light');
   }
 }
 

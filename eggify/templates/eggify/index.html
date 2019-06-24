@@ -1,7 +1,6 @@
 {% load static %}
-{% load widget_tweaks %}
 <!DOCTYPE html>
-<HTML lang="en">
+<HTML lang="en" data-theme="light">
 	<HEAD>
 		<META name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<META http-equiv="content-type" content="text/html; charset=utf-8">
@@ -11,16 +10,16 @@
                 <SCRIPT type="text/javascript" src="/static/eggify/scripts.js"></SCRIPT>
 	</HEAD>
 
-	<BODY class={{ theme }}>
-		<HEADER class={{ theme }}>
+	<BODY>
+		<HEADER>
 			<DIV>
 			<a href="{% url 'eggify:index' %}"><DIV id="logo"></DIV></a>
 			</DIV>
 		</HEADER>
 
-		<MAIN class={{ theme }}>
+		<MAIN>
                         <DIV>
-                                <BUTTON class={{ theme }} id="theme" onclick="changeTheme()">dark theme</BUTTON>
+                                <BUTTON id="theme" onclick="changeTheme()">dark theme</BUTTON>
                         </DIV>
 			<DIV>
 				<SECTION>
@@ -28,12 +27,12 @@
 				<FORM action="egged/" method="post" accept-charset="utf-8">
 				{% csrf_token %}
 				your input language:
-				{{ form.input_language|add_class:"yellow_egg" }}
-				{{ form.your_input|add_class:"yellow_egg" }}
+				{{ form.input_language }}
+				{{ form.your_input }}
 				eggify output language:
-				{{ form.output_language|add_class:"yellow_egg" }}
+				{{ form.output_language }}
 				<br><br>
-				<BUTTON class={{ theme }}>eggify!</BUTTON>
+				<BUTTON>eggify!</BUTTON>
 				</FORM>
 				</SECTION>
 				<SECTION>
@@ -55,7 +54,7 @@
 			</DIV>
 		</MAIN>
 
-		<FOOTER class={{ theme }}>
+		<FOOTER>
 			<DIV>
 				<ARTICLE>
 				<H3>Find us:</H3>
@@ -63,13 +62,13 @@
 				</ARTICLE>
 				<ARTICLE>
 				<H3>The brains that made eggify possible:</H3>
-				Samie Azad: <a href="https://github.com/sazad44" target="_blank" class={{ theme }}>GitHub</a> / <a href="https://twitter.com/AzadSamie" target="_blank" class={{ theme }}>Twitter</a>
+				Samie Azad: <a href="https://github.com/sazad44" target="_blank">GitHub</a> / <a href="https://twitter.com/AzadSamie" target="_blank">Twitter</a>
 				<br>
-				Athena Deng: <a href="https://github.com/ad-egg" target="_blank" class={{ theme }}>GitHub</a> / <a href="https://twitter.com/CloudyCloak" target="_blank" class={{ theme }}>Twitter</a>
+				Athena Deng: <a href="https://github.com/ad-egg" target="_blank">GitHub</a> / <a href="https://twitter.com/CloudyCloak" target="_blank">Twitter</a>
 				</ARTICLE>
 				<ARTICLE>
 				<H3>eggify's code</H3>
-				Check it out on <a href="https://github.com/ad-egg/eggify" target="_blank" class={{ theme }}>GitHub</a>
+				Check it out on <a href="https://github.com/ad-egg/eggify" target="_blank">GitHub</a>
 				</ARTICLE>
 			</DIV>
 		</FOOTER>
