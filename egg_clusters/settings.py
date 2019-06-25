@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '8(6$!7)rp)%2#!-z=kz93ynhp#=c%zb=komrrjopx!5sb02m1y'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['0.0.0.0', '127.0.0.1', '55.55.55.5', '*']
 
@@ -32,7 +32,6 @@ ALLOWED_HOSTS = ['0.0.0.0', '127.0.0.1', '55.55.55.5', '*']
 
 INSTALLED_APPS = [
     'eggify.apps.EggifyConfig',
-    'widget_tweaks',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -81,8 +80,8 @@ DATABASES = {
         'NAME': 'eggify_db',
         'USER': 'eggmin',
         'PASSWORD': 'eggmin-pwd',
-        'HOST': 'db',
-        'PORT': '3306',
+        'HOST': '127.0.0.1',
+        'PORT': '',
     }
 }
 
