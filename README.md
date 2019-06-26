@@ -22,7 +22,7 @@ _Hi, my name is Athena and I like eggs, puns, and word games. I started studying
 ## Features
 - eggify input text 
 - different languages output
-- ink to original input
+- link to original input
 - deployed in container 
 - one click deploy/down
 
