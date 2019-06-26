@@ -13,6 +13,7 @@ When you have any non-egg (eggn't) content to share with a "only allowed to say 
 ## About us
 **Samie**: [GitHub](https://github.com/sazad44) / [Twitter](https://twitter.com/AzadSamie) / [LinkedIn](https://www.linkedin.com/in/samieazad/)
 
+_Samie's intro goes here?_
 
 **Athena**: [GitHub](https://github.com/ad-egg) / [Twitter](https://twitter.com/CloudyCloak) / [LinkedIn](https://www.linkedin.com/in/ad-egg/)
 
@@ -36,6 +37,7 @@ back end and front end:
 6. Object id is sent to front end and appended to hostname and url
 
 SRE stuff:
+
 
 ## Challenges
 - learning new frameworks/technologies: Django, HTML, CSS, JavaScript, Docker, PHP
