@@ -47,6 +47,7 @@ SRE stuff:
 * You must create an empty directory after cloning named `mysql`
 
 ## Future of eggify
+- user accounts to store history
 - support input languages other than English
 - support emojis
 - dark theme
