@@ -27,7 +27,7 @@ _Hi, my name is Athena and I like eggs, puns, and word games. I started studying
 - one click deploy/down
 
 ## How it works
-back end and front end:
+**back end and front end:**
 
 1. User visits eggify site
 2. User inputs text
@@ -42,7 +42,7 @@ back end and front end:
 9. Someone not fluent in egg visits link to someone's original input
    <img src="https://lh3.googleusercontent.com/H19YJ1Kfp23vgIUh_UkGOE4eYG-qIH2fyi6dBNW_CLb2YPNi3BPHyqGLS08VbuLw8G84Gco0n1r9cINP7WsGlFn62gkZnz3JIIfA6HtYEflRygNvulye2DnGLGh_bQbEUSELPyX_ZI0u8g4DS0vK5pATXKMICO_rK7_yG5jMcANvaDlr0k6-ot1gXweSEGJduS3VoT7xKW73Zz8Z8E7WPVbsrMmCKcsIdoiD7dU1i3rSZ5hwKq_aqaF0Xh_rv4wEeJ81V3Xq3iDXEraD1Hrlt7Or13Vr91JuchdWnNbHWEwGsFtNQdTzjQAxS698IS_LEG5TS6s3AeB8Q_WpCr09b3P-joeqGooVOyAv1SlKkd2NYktThLBMT2jDYSM3oBO6c3vBRrdED0PevcAl76JbWsIzuCAcopzpe0EyH8p_mpiPdGIt2IzWIT9uZQUPxPU_V4gBu5EoIy5auZ0QaXgfIXh2fbD-jPe49aeuRvFmJR1FygHz7t-a9rEiJVngFFfo8t9Ak7u3KKM_SYEpi9OpsNjf8Q9Y-MIQhuZ4Ksuo-cypAyowGuBzAYH0QUyxreTBkquAs-ZYSc9QdRR3GKTa6ppC8KHgUg_Qm3Fd9-cVtM8TzMq-dw4uaIBoThAUbvHsyrkc6EdvYkyh7pD5OwFO1a7knO0hAA=w1740-h714-no" alt="original input is displayed">
 
-SRE stuff:
+**SRE stuff:**
 
 <img src="https://lh3.googleusercontent.com/r-EG7orPg2Ca2oRApreMtGnXlh_J2VQwWjowiIJ5C0bRLR81kRcfFLlINmWczEy8sQ3LgKnDjigoq3phK-XesgP6yTi4tnIwYBqQOqOgbYPlWVbyYsseoOaELNsX4EEcaJ5uEvBqsR-9pErGoQk2xY_CWFGCySWubfhr2yPT6fl8m9enJCub7bEImtNlWPKJSdwmCmfQ2bbHFb5Dk7GFNOO7VWQu9VaHDH7wDtpNIOfs2P4c-uFUaaAZt5RYnlOW6NuD-BgCqtO2CNFiymgOt0IZZdZsR8VUVd-BvcGMwLwi3vKOfkpiou5D0FN0RGHgJEELSj31KfnxWMKbsT5JszZ2_v14bxH5b3XooLb5dioZkCQo3Jqr1039pTwoSXZsL1vjD5BOvlOzk0xALs5O7628B1GfFqASHDL0bMelar3fvtqYxYz90qu-IiJErKCN17l7V1Dxot35gdeZjNnYBiv5DLNNx4a8sYC_QL4gcwGXLXaZOLhwL8pxbNNzrnE2hY8GgRyqmLGcLK9ObpuQzhcMs2-gOoyn5tuzeHgfTeM5azWUKnwc4QD1ToEf8TX7bYHcrVaLsPRaQtnm37xxZvNjuxSMcwGCYWmOTAwXNiqIpsyRHGTugNzk3Exuw3CUBy8nsH8EGlW1YtTzAGnhDfEUOp5jcQ=w1186-h446-no" alt="page with DEPLOY, PROVISION, PP_INSTALL, DOWN buttons">
 
