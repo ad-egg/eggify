@@ -15,14 +15,14 @@ When you have any non-egg (eggn't) content to share with a "only allowed to say 
 
 _Samie's intro goes here?_
 
-**Athena**: [GitHub](https://github.com/ad-egg) / [Twitter](https://twitter.com/CloudyCloak) / [LinkedIn](https://www.linkedin.com/in/ad-egg/)
+**Athena**: [GitHub](https://github.com/ad-egg) / [LinkedIn](https://www.linkedin.com/in/ad-egg/)
 
 _Hi, my name is Athena and I like eggs, puns, and word games. I started studying at [Holberton School](https://www.holbertonschool.com/) and realized that I enjoy coding and how much I like eggs. I like them so much that I founded the public `egg` channel in our school Slack! Somewhere along the way I discovered there are corners of the internet where you are only allowed to say the word “egg” and other variations of it, and the idea for eggify was born. I wanted to make a web app that incorporated my love of egg and the concepts I learned at school. I am looking for a backend developer position so hire me please!_
 
 ## Features
 - eggify input text 
 - different languages output
-- ink to original input
+- link to original input
 - deployed in container 
 - one click deploy/down
 
@@ -55,4 +55,4 @@ SRE stuff:
 - CI/CD pipeline
 - website is 100% accessible
 
-If you have any good ideas for features, please contact Athena through [Twitter](https://twitter.com/CloudyCloak) or [LinkedIn](https://www.linkedin.com/in/ad-egg/). For deployment ideas, please contact Samie through [Twitter](https://twitter.com/AzadSamie) or [LinkedIn](https://www.linkedin.com/in/samieazad/).
+If you have any good ideas for features, please contact Athena through [LinkedIn](https://www.linkedin.com/in/ad-egg/). For deployment ideas, please contact Samie through [Twitter](https://twitter.com/AzadSamie) or [LinkedIn](https://www.linkedin.com/in/samieazad/).
