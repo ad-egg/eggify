@@ -32,7 +32,7 @@ _Hi, my name is Athena and I like eggs, puns, and word games. I started studying
 1. User visits eggify site
 2. User inputs text
 3. User clicks “eggify” button, which sends POST request
-   
+   ![post eggnt][user has entered text and is ready to eggify the input]
 4. New object is created from user input and saved into database
 5. User input is eggified to specified language
 6. Eggified output sent to front end and displayed
@@ -64,3 +64,4 @@ _Hi, my name is Athena and I like eggs, puns, and word games. I started studying
 
 If you have any good ideas for features, please contact Athena through [LinkedIn](https://www.linkedin.com/in/ad-egg/). For deployment ideas, please contact Samie through [Twitter](https://twitter.com/AzadSamie) or [LinkedIn](https://www.linkedin.com/in/samieazad/).
 
+[post eggnt]: https://lh3.googleusercontent.com/RTS6w9_UysOJzgq8zlE9XsGCylYSEBvy3QXQhXdqebcERwie1vPUFwFX9XwdU3xmpdVDGzOyVO7T6MbNYu7-LkQ03kUaWx5HjtCSIHveLz3kgcQv5ZNlopAzE81zLO9kDkNNWmGUx1JBRUWGi00qoz2n88C2zOY7kBXuYDqM8vdk9xNqtj6DYxXJ8-HIyIeEox7E2DqKajnzjBYws8d5lcpF681fzeK2wvLe9C7LMBKlAwgvnAwp6rib7ze5H54FgKoeV5ZHaEXcfT-E9VfBJxfHx31XCa8bytX5ApYKAyTqEIRyC_QUy4O7qTEPPkITuM8yObiW0V-T3AoYdpdjNA1IB5RD20MSa2EGJ_88EhVGgT_1_jpXI_yk4tUEg2iz7-GwAhN8pXaiz4zm2D788Zt5jTJU6NDG9bWe3OCjfQ44JjWxd12eRtYHHOmdIVuQ5lGYRV_wX06i-cN50met7vHH5nvIvmxugdb5x8qiPrHH5gyEOB0gFL0xdPUbKXX3xZPl3b0DA-encWINktIdCGv5Td79hxBhE-p2vw6HDoMg8O5EpyBqY_eE6Ivblf30V_JVnS60qBxHrTfzThti7kP1HD1Tgye_ev01DE3_d9xXZQlHiQutEHiD64fSoWwArsLR5WxrixB6GDnM9klSndn9Rn9fYw=w1756-h890-no
