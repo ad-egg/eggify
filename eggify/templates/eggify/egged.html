@@ -1,6 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
-<HTML lang="en" data-theme="light">
+<HTML lang="en" data-theme="">
         <HEAD>
 		<META name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
                 <TITLE>Eggified</TITLE>
@@ -12,14 +12,17 @@
         <BODY>
                 <HEADER>
 			<DIV>
-                        <a href="{% url 'eggify:index' %}"><DIV id="logo"></DIV></a>
-			</DIV>
+                        	<a href="{% url 'eggify:index' %}"><DIV id="logo"></DIV></a>
+                                <DIV id="theme-switch-wrapper">
+                                        <LABEL for="checkBox" id="theme-label">
+                                                <INPUT type="checkbox" id="checkBox">
+                                                <DIV class="slider round"></DIV>
+                                        </LABEL>
+                                </DIV>
+                        </DIV> 
                 </HEADER>
 
                 <MAIN>
-                        <DIV>
-                                <BUTTON id="theme" onclick="changeTheme()">dark theme</BUTTON>
-                        </DIV>
 			<DIV>
 				<SECTION>
 				<H3>Everything is egg!</H3>
@@ -54,7 +57,7 @@
 				<H3>The brains that made eggify possible:</H3>
 				Samie Azad: <a href="https://github.com/sazad44" target="_blank">GitHub</a> / <a href="https://twitter.com/AzadSamie" target="_blank">Twitter</a>
 				<br>
-				Athena Deng: <a href="https://github.com/ad-egg" target="_blank">GitHub</a> / <a href="https://twitter.com/CloudyCloak" target="_blank">Twitter</a>
+				<a href="https://ad-egg.github.io/" target="_blank">Athena Deng</a>: <a href="https://github.com/ad-egg" target="_blank">GitHub</a> / <a href="https://www.linkedin.com/in/ad-egg/" target="_blank">LinkedIn</a>
 				</ARTICLE>
 				<ARTICLE>
 				<H3>eggify's code</H3>
