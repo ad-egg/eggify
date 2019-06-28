@@ -1,15 +1,25 @@
-function changeTheme () {
-  let oppTheme = document.getElementById('theme');
-  if (oppTheme.innerHTML === 'dark theme') {
-    oppTheme.innerHTML = 'light theme';
-    document.documentElement.setAttribute('data-theme', 'dark');
-    localStorage.setItem('theme', 'dark');
-  } else {
-    oppTheme.innerHTML = 'dark theme';
-    document.documentElement.setAttribute('data-theme', 'light');
-    localStorage.setItem('theme', 'light');
-  }
+function switchTheme(e) {
+    if (e.target.checked) {
+        document.documentElement.setAttribute('data-theme', 'centuryEgg');
+	localStorage.setItem('theme', 'centuryEgg');
+    }
+    else {
+        document.documentElement.setAttribute('data-theme', 'yellowEgg');
+	localStorage.setItem('theme', 'yellowEgg');
+    }    
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+  const currentTheme = localStorage.getItem('theme') || null;
+  const toggleSwitch = document.querySelector('#theme-label input[type="checkbox"]');
+  toggleSwitch.addEventListener('change', switchTheme, false);
+  if (currentTheme) {
+    document.documentElement.setAttribute('data-theme', currentTheme);
+    if (currentTheme === 'centuryEgg') {
+      toggleSwitch.checked = true;
+    }
+  }
+});
 
 function copyEgg () {
   // gets the text box

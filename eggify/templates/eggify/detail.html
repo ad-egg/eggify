@@ -13,7 +13,12 @@
 		<HEADER>
 			<DIV>
                         	<a href="{% url 'eggify:index' %}"><DIV id="logo"></DIV></a>
-                                <DIV id="theme"><INPUT type="checkbox" id="checkBox"></DIV>
+                                <DIV id="theme-switch-wrapper">
+                                        <LABEL for="checkBox" id="theme-label">
+                                                <INPUT type="checkbox" id="checkBox">
+                                                <DIV class="slider round"></DIV>
+                                        </LABEL>
+                                </DIV>
                         </DIV> 
 		</HEADER>
 
