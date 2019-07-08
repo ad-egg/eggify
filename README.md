@@ -33,19 +33,19 @@ _Hi, my name is Athena and I like eggs, puns, and word games. I started studying
 2. User inputs text
 3. User clicks “eggify” button, which sends POST request
 
-![user has entered text and is ready to eggify the input](eggify/static/eggify/images/index.png)
+   ![user has entered text and is ready to eggify the input](eggify/static/eggify/images/index.png)
 
 4. New object is created from user input and saved into database
 5. User input is eggified to specified language
 6. Eggified output sent to front end and displayed
 7. Object id is sent to front end and appended to hostname and url
 
-![eggified output is displayed along with a link for the original input](eggify/static/eggify/images/egged.png)
+   ![eggified output is displayed along with a link for the original input](eggify/static/eggify/images/egged.png)
 
 8. User can use top button to copy eggified out put to share with egg community, and use the bottom button to copy link to original input to share along with eggified output
 9. Someone not fluent in egg visits link to someone's original input
 
-![user can see original input](eggify/static/eggify/images/detail.png)
+   ![user can see original input](eggify/static/eggify/images/detail.png)
 
 **SRE stuff:**
 
