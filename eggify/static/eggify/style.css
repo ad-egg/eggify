@@ -205,6 +205,18 @@ input:checked + .slider:before {
 	border-radius: 50%;
 }
 
+.iframes {
+	position: relative;
+	overflow: hidden;
+	padding-top: 56.25%;
+	width: border-box;
+}
+
 .vids {
-	border-style: none;	
+	border-style: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
