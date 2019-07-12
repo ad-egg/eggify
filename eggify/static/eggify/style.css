@@ -209,7 +209,7 @@ input:checked + .slider:before {
 	position: relative;
 	overflow: hidden;
 	padding-top: 56.25%;
-	width: border-box;
+	width: 100%;
 }
 
 .vids {
