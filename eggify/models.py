@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""DOCSTRING GOES HERE"""
+"""this module contains class definition for Eggnt"""
 
 import uuid
 
@@ -8,7 +8,31 @@ from django.utils import timezone
 
 
 class Eggnt(models.Model):
-    """a class Eggnt"""
+    """
+    a class used to represent a user's input
+
+    ...
+
+    Attributes
+    ----------
+    id : str
+        a unique string that identifies a Eggnt object
+    created_at : datetime
+        records when an object was created
+    input_language : str
+        a string that represents the language of the user's input (default "English")
+    words : str
+        the user's input
+
+    Methods
+    -------
+    __str__(self):
+        prints the user's input string that is associated with the object
+    create(cls, words):
+        creates a new Eggnt object
+    update(cls, words):
+        overrides default update method to ensure a new object is created every time
+    """
 
     # languages
     ENGLISH = 'EN'
