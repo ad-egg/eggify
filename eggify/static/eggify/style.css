@@ -44,11 +44,33 @@ main {
 	padding: 10px;
 }
 
-div {
-        display: block;
-        width: 75%;
-        margin-left: auto;
-        margin-right: auto;
+@media only screen and (min-width: 1000px) {
+	div {
+        	display: block;
+        	width: 75%;
+	        margin-left: auto;
+        	margin-right: auto;
+	}
+}
+
+/* for tablet screens */
+@media only screen and (max-width: 1000px) {
+	div {
+		display: block;
+		width: 80%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+/* for phone portrait screens */
+@media only screen and (max-width: 415px) {
+	div {
+		display: block;
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
 
 section {
