@@ -1,11 +1,29 @@
 #!/usr/bin/python3
-"""MODULE FOR FORMS CLASSES"""
+"""this module contains the class definition for InputForm"""
 
 from django import forms
 
 
 class InputForm(forms.Form):
-    """a class InputForm"""
+    """
+    a class used to represent an input form
+    
+    ...
+    
+    Attributes
+    ----------
+    input_language : str
+        a string that specifies the input language of a user's entry (default 'English')
+    your_input: str
+        a user's input
+    output_language : str
+        the output language the user wants
+        
+    Methods
+    -------
+    
+    
+    """
     input_language = forms.ChoiceField(initial='English', choices=[
             ('English', 'English')
     ])
