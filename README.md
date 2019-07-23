@@ -1,6 +1,6 @@
 # eggify
 ## Where to find eggify
-click [HERE](http://eggventure.online/)
+[Samie](https://www.linkedin.com/in/samieazad/) has deployed it [HERE](http://eggventure.online/)!
 
 ## What is eggify
 This project is a collaboration between Samie Azad and Athena Deng for their portfolio project at the end of their foundation year at [Holberton School](https://www.holbertonschool.com/). It was designed to be the ultimate portfolio project: 
