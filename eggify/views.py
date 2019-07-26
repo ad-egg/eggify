@@ -14,16 +14,13 @@ from .models import Eggnt
 
 
 def index(request):
-    location = 'Holberton<br>972 Mission St.<br>San Francisco, CA 94103'
     form = InputForm()
     return render(request, 'eggify/index.html', {
             'form': form,
             'cache_id': str(uuid.uuid4()),
-            'location': location
             })
 
 def egged(request):
-    location = 'Holberton<br>972 Mission St.<br>San Francisco, CA 94103'
     if request.method == 'POST':
         form = InputForm(request.POST)
         if form.is_valid():
@@ -39,7 +36,6 @@ def egged(request):
                     'eggnt': eggnt,
                     'host_name': host_name,
                     'cache_id': str(uuid.uuid4()),
-                    'location': location
                     })
     elif request.method == 'GET':
         return redirect('eggify:index')
@@ -49,22 +45,18 @@ def detail(request, eggnt_uid):
         eggnt = Eggnt.objects.get(pk=eggnt_uid)
     except Eggnt.DoesNotExist:
         raise Http404("Unfortuneggly, there is no entry by that ID.")
-    location = 'Holberton<br>972 Mission St.<br>San Francisco, CA 94103'
     return render(request, 'eggify/detail.html', {
             'eggnt': eggnt,
             'cache_id': str(uuid.uuid4()),
-            'location': location
             })
 
 def eggnt(request):
     raise Http404("Nothing to see here.")
 
 def error_404(request, exception):
-    location = 'Holberton<br>972 Mission St.<br>San Francisco, CA 94103'
     data = {
         'exception': exception,
         'cache_id': str(uuid.uuid4()),
-        'location': location
     }
     return render(request, '404.html', data)
 
