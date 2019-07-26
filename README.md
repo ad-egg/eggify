@@ -25,6 +25,8 @@ _Hi, my name is Athena and I like eggs, puns, and word games. I started studying
 - link to original input
 - deployed in container 
 - one click deploy/down
+- theme toggle
+- HTTPS
 
 ## How it works
 **back end and front end:**
@@ -62,7 +64,8 @@ _Hi, my name is Athena and I like eggs, puns, and word games. I started studying
 - user accounts to store history
 - support input languages other than English
 - support emojis
-- dark theme
+- ~~dark theme~~
+- ~~HTTPS~~
 - single page app
 - CI/CD pipeline
 - website is 100% accessible
