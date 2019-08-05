@@ -49,7 +49,7 @@ _Hi, my name is Athena and I like eggs, puns, and word games. I started studying
 
    ![user can see original input](eggify/static/eggify/images/detail.png)
 
-**SRE stuff:**
+**SysAdmin stuff:**
 
 ![developer's portal with DEPLOY, PROVISION, PP_INSTALL, DOWN buttons](eggify/static/eggify/images/dev_portal.png)
 
