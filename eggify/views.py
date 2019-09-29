@@ -73,4 +73,7 @@ def to_egg(words, output_language):
     }
     egged = re.sub(r'[a-z|A-Z]+', egg_languages[output_language], words)
     egged = re.sub(r'[1-9]', '0', egged)
+    if output_language == 'hanzi':
+        egged = egged.replace('蛋 蛋', '蛋蛋')
+        egged = egged.replace('蛋 蛋', '蛋蛋')
     return egged
