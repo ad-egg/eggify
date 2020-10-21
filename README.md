@@ -59,13 +59,13 @@ _Hi, my name is Athena and I like eggs, puns, and word games. I started studying
 * You must create an empty directory after cloning named `mysql`
 
 ## Future of eggify
-- user accounts to store history
-- support input languages other than English
-- support emojis
-- ~~dark theme~~
-- ~~HTTPS~~
-- single page app
-- CI/CD pipeline
-- website is 100% accessible
+- [ ] user accounts to store history
+- [ ] support input languages other than English
+- [ ] support emojis
+- [x] dark theme
+- [x] HTTPS
+- [ ] single page app
+- [ ] CI/CD pipeline
+- [ ] website is 100% accessible
 
 If you have any good ideas for features, please contact Athena through [LinkedIn](https://www.linkedin.com/in/ad-egg/). For deployment ideas, please contact Samie through [Twitter](https://twitter.com/AzadSamie) or [LinkedIn](https://www.linkedin.com/in/samieazad/).
